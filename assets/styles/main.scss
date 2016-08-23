@@ -1,0 +1,34 @@
+/*----------------------------------*\
+    Pear Web Page
+\*----------------------------------*/
+/*
+ TABLE OF CONTENTS
+    01. Variables.......................Imported via gulp and can be found in _vars.scss
+    02. Global..........................The general styles like align-center etc.
+    03. Utilities.......................The general styles like align-center etc.
+    04. Layout..........................The general styles like align-center etc.
+    05. Components......................The general styles like align-center etc.
+*/
+/*
+	Variables
+*/
+@import "vars";
+
+/*
+	Global
+*/
+@import "global";
+
+/*
+	Utilities
+*/
+@import "utilities/button";
+
+/*
+	Layout
+*/
+@import "layout/header";
+
+/*
+	Components
+*/
