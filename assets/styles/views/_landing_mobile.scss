@@ -1,0 +1,37 @@
+.mobile {
+  text-align: center;
+
+  .transition {
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+
+  .opacity {
+    opacity: 0;
+  }
+
+  .title-container {
+    position: relative;
+    text-align: center;
+    height: 50px;
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+  }
+
+  .iphone-image {
+    display: inline-block;
+    position: relative;
+
+    .shot {
+      position: absolute;
+      top: 130px;
+      left: 25px;
+    }
+  }
+
+}

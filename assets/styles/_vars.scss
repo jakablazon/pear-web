@@ -1,3 +1,16 @@
+/*
+	Colors
+*/
+
+$color-green: #62D6C5;
+
+$color-grey-dark: #333333;
+$color-black: #000000;
+
+/*
+	Media Query Breakpoints
+*/
+
 $extra2-small-screen: 320px;
 $extra-small-screen-max: 479px;
 $extra-small-screen: 480px;
@@ -20,3 +33,33 @@ $medium-and-up: 'only screen and (min-width : #{$medium-screen})';
 $large-and-down: 'only screen and (min-width : #{$extra-large-screen-max})';
 $large-and-up: 'only screen and (min-width : #{$large-screen})';
 $extra-large-and-up: 'only screen and (min-width : #{$extra-large-screen})';
+
+
+$font-primary: "Montserrat";
+
+
+/*
+	Font Weights
+*/
+$thin: 100;
+$light: 200;
+$book: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+/*
+	Font Sizes
+*/
+
+$font-xs: 14px;
+$font-sm: 18px;
+$font-smd: 20px;
+$font-md: 24px;
+$font-lg: 28px;
+$font-mlg: 38px;
+$font-xlg: 50px;
+$font-xxlg: 70px;

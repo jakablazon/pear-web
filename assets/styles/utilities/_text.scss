@@ -1,0 +1,188 @@
+/*----------------------------------*\
+    Text
+\*----------------------------------*/
+/*
+	Align
+*/
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/*
+	Decoration
+*/
+.text-decoration-none {
+	text-decoration: none;
+}
+
+a.text-decoration-none {
+	text-decoration: none;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+/*
+	Transform
+*/
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+/*
+	Variant
+*/
+.text-small-caps {
+	font-variant: small-caps;
+}
+
+h5.text-small-caps{
+	font-size: 25px;
+}
+
+.text-italic{
+  font-style: italic;
+}
+
+/*
+	Weight
+*/
+.text-thin {
+	font-weight: $thin;
+}
+
+.text-light {
+	font-weight: $light;
+}
+
+.text-book {
+	font-weight: $book;
+}
+
+.text-regular {
+	font-weight: $normal;
+}
+
+.text-medium {
+	font-weight: $medium;
+}
+
+.text-semi-bold {
+	font-weight: $semi-bold;
+}
+
+.text-bold {
+	font-weight: $bold;
+}
+
+.text-black {
+	font-weight: $black;
+}
+
+/*
+	Color
+*/
+
+.text-color-green {
+  color: $color-green;
+}
+
+.text-color-grey-dark {
+	color: $color-grey-dark;
+}
+
+.text-color-black {
+	color: $color-black;
+}
+
+/*
+	Font Size
+*/
+.text-big {
+	font-size: 110px;
+
+	@media #{$small-and-down} {
+		font-size: 75px;
+	}
+
+	@media #{$extra-small-and-down} {
+		font-size: 55px;
+	}
+}
+
+/*
+ 	Text utils
+*/
+.text-clear-space-below{
+	float:left;
+	padding-bottom: 40px;
+}
+
+.text-optional {
+  opacity:.5;
+}
+
+/*
+ 	Text sizes
+*/
+.text-size-xs {
+	font-size: $font-xs
+}
+
+.text-size-sm {
+	font-size: $font-sm
+}
+
+.text-size-smd {
+  font-size: $font-smd
+}
+
+.text-size-md {
+	font-size: $font-md
+}
+
+.text-size-lg {
+	font-size: $font-lg
+}
+
+.text-size-mlg {
+  font-size: $font-mlg
+}
+
+.text-size-xlg {
+	font-size: $font-xlg
+}
+
+/*
+  Line height
+*/
+
+.text-line-height-1 {
+  line-height: 1
+}
+
+.text-link {
+  cursor: pointer;
+	text-decoration: none;
+	color: $color-green;
+  &:hover {
+    color: darken($color-green, 20%);
+  }
+}
+
+h3 {
+  font-size: 32px;
+}

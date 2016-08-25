@@ -1,3 +1,16 @@
 pre {
 	font-size: 1px;
 }
+
+html{
+  font-family: $font-primary;
+	color: $color-grey-dark;
+}
+
+body {
+	color: $color-grey-dark;
+}
+
+.clickable {
+	cursor: pointer;
+}

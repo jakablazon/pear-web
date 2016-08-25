@@ -1,0 +1,155 @@
+/*----------------------------------*\
+    Spacing
+\*----------------------------------*/
+/*
+	Margins and paddings
+*/
+/* Mixin to create margins and paddings sizes. Margin/Padding size divides depending on the screen size */
+
+@mixin space-value ($class, $attribute, $val, $val2, $val3, $val4, $val5, $val6, $val7, $val8, $val9, $val10, $val11) {
+	.#{$class}8 {
+		#{$attribute}: $val * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val/2) * 1px !important;
+		}
+	}
+
+	.#{$class}16 {
+		#{$attribute}: $val2 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val2/2) * 1px !important;
+		}
+	}
+
+	.#{$class}24 {
+		#{$attribute}: $val3 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val3/2) * 1px !important;
+		}
+	}
+
+	.#{$class}32 {
+		#{$attribute}: $val4 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val4/2) * 1px !important;
+		}
+	}
+
+	.#{$class}40 {
+		#{$attribute}: $val5 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val5/2) * 1px !important;
+		}
+	}
+
+	.#{$class}48 {
+		#{$attribute}: $val6 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val6/2) * 1px !important;
+		}
+	}
+
+	.#{$class}56 {
+		#{$attribute}: $val7 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val7/2) * 1px !important;
+		}
+	}
+
+	.#{$class}64 {
+		#{$attribute}: $val8 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val8/2) * 1px !important;
+		}
+	}
+
+	.#{$class}72 {
+		#{$attribute}: $val9 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val9/2) * 1px !important;
+		}
+	}
+
+	.#{$class}84 {
+		#{$attribute}: $val10 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val10/2) * 1px !important;
+		}
+	}
+
+	.#{$class}96 {
+		#{$attribute}: $val11 * 1px !important;
+
+		@media #{$extra-small-and-down} {
+			#{$attribute}: ($val11/2) * 1px !important;
+		}
+	}
+}
+
+/* Other margin classes */
+.margin0 {
+	margin: 0 !important;
+}
+
+.mt0 {
+	margin-top: 0 !important;
+}
+
+.mr0 {
+	margin-right: 0 !important;
+}
+
+.mb0 {
+	margin-bottom: 0 !important;
+}
+
+.ml0 {
+	margin-left: 0 !important;
+}
+
+/* Include margins from mixin */
+@include space-value('mt', margin-top, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+@include space-value('mr', margin-right, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+@include space-value('mb', margin-bottom, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+@include space-value('ml', margin-left, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+
+/* Other padding classes  */
+.padding0 {
+	padding: 0 !important;
+}
+
+.pt0 {
+	padding-top: 0 !important;
+}
+
+.pr0 {
+	padding-right: 0 !important;
+}
+
+.pb0 {
+	padding-bottom: 0 !important;
+}
+
+.pl0 {
+	padding-left: 0 !important;
+}
+
+.padding-top-container {
+	padding-top: 72px !important;
+}
+
+/* Include paddings from mixin */
+@include space-value('pt', padding-top, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+@include space-value('pr', padding-right, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+@include space-value('pb', padding-bottom, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);
+@include space-value('pl', padding-left, 8, 16, 24, 32, 40, 48, 56, 64, 72, 84, 96);

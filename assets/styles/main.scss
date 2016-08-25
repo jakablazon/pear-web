@@ -9,6 +9,13 @@
     04. Layout..........................The general styles like align-center etc.
     05. Components......................The general styles like align-center etc.
 */
+
+/*import fonts*/
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
 /*
 	Variables
 */
@@ -23,6 +30,8 @@
 	Utilities
 */
 @import "utilities/button";
+@import "utilities/text";
+@import "utilities/spacing";
 
 /*
 	Layout
