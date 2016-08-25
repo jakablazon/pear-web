@@ -108,7 +108,7 @@ gulp.task('watch', function() {
         },
         files: config.files
     });
-    gulp.watch('../templates/**/*', {cwd: paths.src}, ['html']);
+    gulp.watch('templates/**/*', {cwd: paths.src}, ['html']);
     gulp.watch('scripts/**/*', {cwd: paths.src}, ['scripts']);
     gulp.watch('images/**/*', {cwd: paths.src}, ['images']);
     gulp.watch('styles/**/*.scss', {cwd: paths.src}, ['styles']);
