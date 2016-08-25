@@ -10,7 +10,7 @@
 		"type": "git",
 		"url": "git+https://github.com/poviolabs/pear-web.git"
 	},
-	"author": "Jan Perse",
+	"author": "PovioLabs",
 	"license": "UNLICENSED",
 	"bugs": {
 		"url": "https://github.com/poviolabs/pear-web/issues"
