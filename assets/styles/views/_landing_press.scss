@@ -1,0 +1,43 @@
+.landing-press {
+  .press-title {
+    background: url('../images/hero-press.png');
+    background-color: black;
+  }
+
+  .press-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .pear-logo {
+    margin: 0 auto;
+    background: url('../images/pear-logo-kit-black.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 79px;
+    height: 107px;
+  }
+
+  .button-download-kit {
+    margin: 0 auto;
+    max-width: 315px;
+  }
+
+  .press-launch {
+    width: 100%;
+
+    .button-join {
+      margin: 0 auto;
+    }
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $color-grey-lightest2;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+}

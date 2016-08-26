@@ -7,7 +7,7 @@
   .landing-main {
 
     &.content {
-      background: url('../images/hero-landing@2x.png');
+      background: url('../images/hero-landing.png');
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
@@ -89,7 +89,8 @@
   .landing-about {
 
     .about-title {
-      background: url('/images/hero-about@2x.png');
+      background: url('../images/hero-about.png');
+      background-color: black;
     }
 
     .what-is-pear {
@@ -100,10 +101,9 @@
   }
 }
 
-.title {
+.hero-title {
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: black;
   color: white;
 
   width: 100%;
@@ -112,11 +112,4 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.landing-press {
-  .press-title {
-    background: url('/images/hero-press@2x.png');
-  }
-
 }

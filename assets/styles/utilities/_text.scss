@@ -77,6 +77,7 @@ h5.text-small-caps{
 }
 
 .text-regular {
+	font-family: 'Montserrat' !important;
 	font-weight: $normal;
 }
 
@@ -214,4 +215,12 @@ h3 {
 
 h4 {
 	font-size: $font-md;
+}
+
+/*
+	Transforms
+*/
+
+.text-underlined {
+	text-decoration: underline;
 }
