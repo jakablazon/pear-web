@@ -9,9 +9,9 @@ $(function () { // wait for document ready
 
 		var controller = new ScrollMagic.Controller();
 
-		var viewVisible = 150;
-		var viewTransition = 100;
-		var baseOffset = 300;
+		var viewVisible = 200;
+		var viewTransition = 150;
+		var baseOffset = 200;
 
 		var sceneIphone = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewVisible * 6 + viewTransition * 5 , offset: baseOffset})
 						.setPin("#iphone")
