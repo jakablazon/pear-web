@@ -5,5 +5,26 @@
     background-repeat: no-repeat;
     width: 100%;
     background-position: center;
+    background-color: black;
+    // flex-direction: column;
+    // justify-content: center;
+
+
+    .mid-section {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      .pear-logo {
+        background: url('/images/pear-logo-color-white.svg') center no-repeat;
+        width: 103px;
+        height: 141px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }
