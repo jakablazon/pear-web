@@ -4,6 +4,7 @@
 
 $color-green: #62D6C5;
 
+$color-grey-light: #afafaf;
 $color-grey-dark: #333333;
 $color-black: #000000;
 
@@ -55,6 +56,7 @@ $black: 900;
 	Font Sizes
 */
 
+$font-xxs: 12px;
 $font-xs: 14px;
 $font-sm: 18px;
 $font-smd: 20px;
@@ -63,3 +65,10 @@ $font-lg: 28px;
 $font-mlg: 38px;
 $font-xlg: 50px;
 $font-xxlg: 70px;
+
+/*
+	Line height
+*/
+
+$line-height-lg: 1.67;
+$line-height-md: 1.44;

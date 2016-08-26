@@ -11,6 +11,9 @@ $(function () { // wait for document ready
   $('.support .item .title').click(function () {
 
     if($(this).parent().hasClass('active')) {
+      $('.support .item.active .desc').slideUp(500);
+
+      $('.support .item').removeClass('active');
       return;
     }
 

@@ -61,6 +61,7 @@ h5.text-small-caps{
 	Weight
 */
 .text-thin {
+	font-family: 'MontserratLight';
 	font-weight: $thin;
 }
 
@@ -100,6 +101,11 @@ h5.text-small-caps{
   color: $color-green;
 }
 
+.text-color-grey-light {
+	color: $color-grey-light;
+}
+
+
 .text-color-grey-dark {
 	color: $color-grey-dark;
 }
@@ -138,6 +144,10 @@ h5.text-small-caps{
 /*
  	Text sizes
 */
+.text-size-xxs {
+	font-size: $font-xxs
+}
+
 .text-size-xs {
 	font-size: $font-xs
 }
@@ -174,6 +184,14 @@ h5.text-small-caps{
   line-height: 1
 }
 
+.text-line-height-lg {
+	line-height: $line-height-lg;
+}
+
+.text-line-height-md {
+	line-height: $line-height-md;
+}
+
 .text-link {
   cursor: pointer;
 	text-decoration: none;
@@ -185,4 +203,8 @@ h5.text-small-caps{
 
 h3 {
   font-size: 32px;
+}
+
+h4 {
+	font-size: $font-md;
 }
