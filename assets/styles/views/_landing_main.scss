@@ -1,9 +1,113 @@
-.landing_main {
-  &.content {
-    background: url('../images/hero-landing@2x.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-position: center;
+.landing {
+  * {
+    font-family: 'MontserratLight';
+  	font-weight: $thin;
+  }
+
+  .landing-main {
+
+    &.content {
+      background: url('../images/hero-landing@2x.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+      background-color: black;
+      // flex-direction: column;
+      // justify-content: center;
+
+
+      .mid-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        .pear-logo {
+          background: url('../images/pear-logo-color-white.svg') center no-repeat;
+          width: 103px;
+          height: 141px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .button-join {
+    width: 226px;
+  }
+
+  .landing-join {
+
+    .form-join {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .button-join {
+      margin: 0 auto;
+    }
+
+    .social-media-section {
+
+      max-width: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &.facebook-icon {
+          background: url('../images/facebook-icon.svg') center no-repeat;
+        }
+
+        &.instagram-icon {
+          background: url('../images/instagram-icon.svg') center no-repeat;
+        }
+
+        &.twitter-icon {
+          background: url('../images/twitter-icon.svg') center no-repeat;
+        }
+      }
+
+    }
+
+  }
+
+  .landing-about {
+
+    .about-title {
+
+      background: url('../images/hero-about@2x.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: black;
+      color: white;
+
+      width: 100%;
+      height: 500px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .what-is-pear {
+      margin: 0 auto;
+      max-width: 581px;
+      width: 100%;
+    }
   }
 }
