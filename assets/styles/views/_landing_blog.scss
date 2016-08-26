@@ -1,7 +1,16 @@
 .blog-cover {
   height: 500px;
   background: url('../images/hero-blog.png') center center;
+  background-color: black;
   background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    color: white;
+  }
 }
 
 .blog {
