@@ -11,7 +11,8 @@ var browserSync = require('browser-sync'),
     clean = require('gulp-clean'),
     watch = require('gulp-watch'),
     runSequence = require('run-sequence'),
-    configFile = require('./config.json');
+    configFile = require('./config.json'),
+    importsFile = require('./imports.json');
 
 // Paths
 var paths = configFile.paths;
@@ -47,7 +48,7 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-    return gulp.src(configFile.scripts)
+    return gulp.src(importsFile.scripts)
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('sourcemaps'))
