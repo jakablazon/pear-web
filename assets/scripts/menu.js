@@ -1,6 +1,9 @@
 $(function() {
 
   var controller = new ScrollMagic.Controller();
+  controller.scrollTo(function (newScrollPos) {
+    $("html, body").animate({scrollTop: newScrollPos});
+});
 
   console.log($(window).innerHeight()/2);
 	// build scenes
@@ -19,4 +22,11 @@ $(function() {
           .addIndicators()
 					.addTo(controller);
 
+  $(document).on("click", ".nav-item", function (e) {
+		var id = $(this).attr("id");
+    console.log('click', id);
+    var triggerId = id + "-trigger";
+			// trigger scroll
+		controller.scrollTo("#" + triggerId);
+	});
 });
