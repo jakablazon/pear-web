@@ -13,6 +13,7 @@ var browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
     configFile = require('./config_prod.json'),
     importsFile = require('./imports.json');
+    serve = require('gulp-serve');
 
 // Paths
 var paths = configFile.paths;
@@ -115,3 +116,12 @@ gulp.task('watch', function() {
     gulp.watch('images/**/*', {cwd: paths.src}, ['images']);
     gulp.watch('styles/**/*.scss', {cwd: paths.src}, ['styles']);
 });
+
+gulp.task('serve-prod', serve({
+  root: ['dist'],
+  port: 80,
+  https: true,
+  middleware: function(req, res) {
+    // custom optional middleware
+  }
+}));
