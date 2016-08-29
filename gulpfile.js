@@ -11,7 +11,7 @@ var browserSync = require('browser-sync'),
     clean = require('gulp-clean'),
     watch = require('gulp-watch'),
     runSequence = require('run-sequence'),
-    configFile = require('./config.json'),
+    configFile = require('./config_prod.json'),
     importsFile = require('./imports.json');
 
 // Paths
