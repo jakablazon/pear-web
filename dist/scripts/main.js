@@ -2954,7 +2954,7 @@ $(function() {
 
   console.log($(window).innerHeight()/2);
 	// build scenes
-	new ScrollMagic.Scene({triggerElement: "#menu-toggle-indicator", offset: ($(window).innerHeight())/2 - 64})
+	new ScrollMagic.Scene({triggerElement: "#menu-toggle-indicator", })
 					.setClassToggle("#top-nav", "white") // add class toggle
           .addIndicators()
 					.addTo(controller);

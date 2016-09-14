@@ -1,7 +1,10 @@
 .landing {
   * {
     font-family: 'MontserratLight';
-  	font-weight: $thin;
+
+    &:not(b) {
+  	   font-weight: $thin;
+    }
   }
 
   .landing-main {
@@ -31,6 +34,10 @@
           height: 141px;
           margin-left: auto;
           margin-right: auto;
+        }
+
+        .we-promise {
+          opacity: 0.5;
         }
       }
 
@@ -91,16 +98,26 @@
   }
 
   .landing-about {
+    .about-subsection-container {
+      display: flex;
+      justify-content: space-between;
 
-    .about-title {
-      background: url('../images/hero-about.png');
-      background-color: black;
-    }
+      .about-subsection {
+        margin: 0 auto;
+        max-width: 264px;
 
-    .what-is-pear {
-      margin: 0 auto;
-      max-width: 581px;
-      width: 100%;
+        h2 {
+            font-size: 20px;
+        }
+
+        hr {
+          width: 44px;
+          border: none;
+          height: 1px;
+          background-color: black;
+          margin-bottom: 18px;
+        }
+      }
     }
   }
 }
