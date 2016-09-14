@@ -120,7 +120,7 @@ gulp.task('watch', function() {
 gulp.task('serve-prod', serve({
   root: ['dist'],
   port: 8080,
-  https: true,
+  https: false,
   middleware: function(req, res) {
     // custom optional middleware
   }
