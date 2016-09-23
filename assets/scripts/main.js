@@ -55,7 +55,6 @@ $(function(){
   var burgerOpen = false;
   $('.burger-menu').on('click', function(e) {
 
-    console.log('tooggle');
     if (!burgerOpen) {
       openBurger();
     } else {

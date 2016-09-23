@@ -2956,7 +2956,6 @@ $(function(){
   var burgerOpen = false;
   $('.burger-menu').on('click', function(e) {
 
-    console.log('tooggle');
     if (!burgerOpen) {
       openBurger();
     } else {
@@ -3011,7 +3010,6 @@ $(function() {
     $("html, body").animate({scrollTop: newScrollPos});
 });
 
-  console.log($(window).innerHeight()/2);
 	// build scenes
 	new ScrollMagic.Scene({triggerElement: "#menu-toggle-indicator", })
 					.setClassToggle("#top-nav", "white") // add class toggle
@@ -3061,7 +3059,6 @@ $(function() {
 
   $(document).on("click", ".nav-item", function (e) {
 		var id = $(this).attr("id");
-    console.log('click', id);
     var triggerId = id + "-trigger";
 			// trigger scroll
 		controller.scrollTo("#" + triggerId);
