@@ -53,6 +53,9 @@
       }
 
       .join-form-container {
+        @media #{$extra-small-and-down} {
+          
+        }
         min-width: 70%;
       }
     }

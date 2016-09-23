@@ -1,7 +1,7 @@
 
 $(function(){
   //setting screen size
-  $('.content').css({ height: $(window).innerHeight() > 700 ? $(window).innerHeight() : 700 });
+  $('.content').css({ height: $(window).innerHeight() > 800 ? $(window).innerHeight() : 800 });
 
   var data = [];
   for (var i = 18; i < 100; i++) {
