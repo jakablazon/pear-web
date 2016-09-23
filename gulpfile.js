@@ -117,6 +117,7 @@ gulp.task('watch', function() {
     gulp.watch('styles/**/*.scss', {cwd: paths.src}, ['styles']);
 });
 
+console.log('environment !!!', process.env.PORT);
 gulp.task('serve-prod', serve({
   root: ['dist'],
   port: process.env.PORT,
