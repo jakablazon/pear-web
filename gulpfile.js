@@ -13,7 +13,7 @@ var browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
     configFile = require('./config_prod.json'),
     importsFile = require('./imports.json');
-    serve = require('gulp-serve');
+    connect = require('gulp-connect');
 
 // Paths
 var paths = configFile.paths;
@@ -118,11 +118,10 @@ gulp.task('watch', function() {
 });
 
 console.log('environment !!!', process.env.PORT);
-gulp.task('serve-prod', serve({
-  root: ['dist'],
-  port: process.env.PORT,
-  https: false,
-  middleware: function(req, res) {
-    // custom optional middleware
-  }
-}));
+gulp.task('serve-prod', function() {
+  connect.server({
+    root: ['dist'],
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
