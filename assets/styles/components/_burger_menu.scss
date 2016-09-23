@@ -1,0 +1,93 @@
+.burger-menu {
+
+
+  @media #{$small-and-up} {
+    display: none;
+  }
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  .burger-line {
+    width: 31px;
+    margin-bottom: 9px;
+    background-color: #fff;
+    height: 2px;
+    transition: all ease-out 0.5s;
+    transform-origin: center left;
+    position: relative;
+
+    &.burger-line-top {
+
+    }
+
+    &.burger-line-middle {
+      opacity: 1;
+    }
+
+    &.burger-line-bottom {
+
+    }
+
+    &.green {
+      background-color: $color-green;
+    }
+  }
+
+  &.open {
+
+    .burger-line-top {
+      transform: rotate(45deg);
+      background-color: $color-grey-light;
+    }
+
+    .burger-line-middle {
+      background-color: transparent;
+      opacity: 0;
+    }
+
+    .burger-line-bottom {
+      background-color: $color-grey-light;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burger-menu-overlay {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'MontserratLight';
+
+    &.visible {
+      display: flex;
+      opacity: 1;
+    }
+
+    .nav-item {
+      font-size: 26px;
+      font-weight: 100;
+      color: $color_grey_light;
+
+      &.active {
+        color: black;
+      }
+    }
+}

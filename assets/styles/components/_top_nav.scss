@@ -1,5 +1,8 @@
 .top-nav {
-
+  @media #{$extra-small-and-down} {
+    display: none;
+  }
+  
   * {
     font-family: 'MontserratLight';
   	font-weight: $thin;

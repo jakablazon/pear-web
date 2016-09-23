@@ -1,0 +1,96 @@
+.select-container {
+
+  *:focus {
+    outline: none;
+  }
+
+  .select2 {
+    width: 100% !important;
+    border: none;
+    text-align: left;
+    font-size: 21px;
+
+    .select2-selection {
+      height: 51px;
+      border: none;
+
+      .select2-selection__rendered {
+        position: relative;
+        top: 10px;
+        color: $color-grey-light;
+        padding-left: 17px;
+      }
+
+      .select2-selection__placeholder {
+        color: $color-grey-lightest;
+      }
+
+      .select2-selection__arrow {
+        top: 11px;
+        right: 10px;
+        b {
+          border-color: $color-grey-lightest transparent transparent;
+          border-width: 7px 6px 0;
+        }
+      }
+    }
+  }
+
+  &.input-line {
+    .select2 {
+      border-bottom: 1px solid $color-grey-lightest2;
+      position: relative;
+      top: -17px;
+
+      .select2-selection__rendered {
+        top: 16px;
+        padding-left: 3px;
+      }
+    }
+  }
+}
+
+.select2-dropdown {
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: $color-grey-light;
+  border: none;
+
+  .select2-results__option--highlighted {
+    background-color: $color-green !important;
+    color: white !important;
+  }
+}
+
+
+// .select-container {
+//
+//   &.input-boxed {
+//     .select-target {
+//       height: 51px;
+//       width: 100%;
+//       border: none;
+//       text-align: left;
+//       font-size: 21px;
+//       color: $color-grey-light;
+//       padding-top: 12px;
+//       background-color: white;
+//
+//       :before {
+//         display: none;
+//       }
+//       :after {
+//         bottom: 2px;
+//       }
+//     }
+//   }
+// }
+
+// .select {
+//   max-width: none;
+//   width: 100%;
+//   .select-content {
+//     max-width: none !important;
+//     width: 100%;
+//   }
+// }

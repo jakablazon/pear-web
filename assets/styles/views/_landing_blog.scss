@@ -47,14 +47,68 @@
 
   .post {
     padding: 20px;
-    
+
     img {
       width: 100%;
     }
   }
 
   .integrations {
+    @media #{$extra-small-and-down} {
+      width: 80%;
+      margin: 0 auto;
+    }
+    //
+    .fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
+    	width: 100% !important;
+    }
+  }
+
+  .social-media-section {
+
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &.facebook-icon {
+        background: url('../images/facebook-icon.svg') center no-repeat;
+      }
+
+      &.instagram-icon {
+        background: url('../images/instagram-icon.svg') center no-repeat;
+      }
+
+      &.twitter-icon {
+        background: url('../images/twitter-icon.svg') center no-repeat;
+      }
+    }
 
   }
 
+  .slick-carousel-container {
+    width: 100%;
+
+    @media #{$extra-small-and-down} {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  @media #{$extra-small-and-down} {
+    h4 {
+      text-align: center;
+    }
+  }
 }

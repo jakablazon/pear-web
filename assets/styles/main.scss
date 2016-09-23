@@ -10,6 +10,13 @@
     05. Components......................The general styles like align-center etc.
 */
 
+/*
+	Libraries
+*/
+
+@import "lib/slick/slick";
+@import "lib/select2.min.scss";
+
 /*import fonts*/
 @font-face {
     font-family: "Montserrat";
@@ -41,12 +48,6 @@
 */
 @import "utilities/text";
 @import "utilities/spacing";
-
-/*
-	Slick
-*/
-
-@import "lib/slick/slick";
 
 
 /*

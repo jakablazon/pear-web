@@ -1,4 +1,11 @@
 .landing-support {
+  .support-container {
+    @media #{$extra-small-and-down} {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
   .support-title {
     background: url('../images/hero-support.png');
     background-color: black;

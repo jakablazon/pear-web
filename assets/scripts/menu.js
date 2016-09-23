@@ -16,6 +16,11 @@ $(function() {
           .addIndicators()
 					.addTo(controller);
 
+  new ScrollMagic.Scene({triggerElement: "#menu-toggle-indicator", offset: $(window).innerHeight()/2 - 50})
+          .setClassToggle(".burger-line", 'green')
+          .addIndicators()
+  				.addTo(controller);
+
   new ScrollMagic.Scene({triggerElement: "#nav-home-trigger", duration: $(".landing-home").height() + 32})
 					.setClassToggle("#nav-home", "active") // add class toggle
           .addIndicators()
@@ -43,6 +48,15 @@ $(function() {
           .addIndicators()
   				.addTo(controller);
 
+  new ScrollMagic.Scene({triggerElement: "#nav-support-trigger", duration: $(".landing-support").height()})
+  				.setClassToggle("#nav-support", "active") // add class toggle
+          .addIndicators()
+  				.addTo(controller);
+  new ScrollMagic.Scene({triggerElement: "#nav-launch-trigger", duration: $(".landing-launch").height()})
+  				.setClassToggle("#nav-launch", "active") // add class toggle
+          .addIndicators()
+  				.addTo(controller);
+
   $(document).on("click", ".nav-item", function (e) {
 		var id = $(this).attr("id");
     console.log('click', id);
@@ -50,4 +64,5 @@ $(function() {
 			// trigger scroll
 		controller.scrollTo("#" + triggerId);
 	});
+
 });
