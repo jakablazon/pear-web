@@ -75,7 +75,8 @@ $(function(){
 
   function openBurger() {
     $('.burger-menu').addClass('open');
-    $('.burger-menu-overlay').addClass('visible');
+    $('.burger-menu-overlay').fadeIn();
+    $('.burger-menu-overlay').css('display', 'flex');
     $('.burger-menu-overlay').css('z-index', 9999);
     $('.burger-menu').css('z-index', 99999);
     $('body').css('overflow', 'hidden');
@@ -84,7 +85,7 @@ $(function(){
 
   function closeBurger() {
     $('.burger-menu').removeClass('open');
-    $('.burger-menu-overlay').removeClass('visible');
+    $('.burger-menu-overlay').fadeOut();
     $('.burger-menu-overlay').css('z-index', -1);
     $('.burger-menu').css('z-index', 5);
     $('body').css('overflow', 'auto');
