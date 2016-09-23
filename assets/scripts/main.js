@@ -1,7 +1,8 @@
 
+$('.content').css({ height: $(window).innerHeight() > 800 ? $(window).innerHeight() : 800 });
+
 $(function(){
   //setting screen size
-  $('.content').css({ height: $(window).innerHeight() > 800 ? $(window).innerHeight() : 800 });
 
   var data = [];
   for (var i = 18; i < 100; i++) {
@@ -13,6 +14,7 @@ $(function(){
     minimumResultsForSearch: Infinity,
     data: data
   });
+  $('.select-age-home').css('visibility', 'visible');
 
 
   if ($('.slick-carousel')[0]) {
