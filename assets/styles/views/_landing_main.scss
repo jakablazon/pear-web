@@ -7,15 +7,20 @@
     }
   }
 
+  #hero-cover {
+    background: url('../images/couple-image.png');
+    background-color: black;
+  }
+
   .landing-main {
 
     &.content {
-      background: url('../images/couple-image.png');
-      background-size: cover;
-      background-repeat: no-repeat;
+      // background: url('../images/couple-image.png');
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
       width: 100%;
-      background-position: 50% 1%;
-      background-color: black;
+      background-position: 50% 1% !important;
+      // background-color: black;
       height: 1000px;
       // flex-direction: column;
       // justify-content: center;

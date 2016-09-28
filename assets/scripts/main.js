@@ -1,4 +1,3 @@
-
 $('.content').css({ height: $(window).innerHeight() > 800 ? $(window).innerHeight() : 800 });
 
 $(function(){
@@ -14,8 +13,12 @@ $(function(){
     minimumResultsForSearch: Infinity,
     data: data
   });
+
   $('.select-age-home').css('visibility', 'visible');
 
+  /*
+    CAROUSEL BLOG
+  */
 
   if ($('.slick-carousel')[0]) {
     $('.slick-carousel').slick({
@@ -53,6 +56,10 @@ $(function(){
       ]
     });
   }
+
+  /*
+    BURGER MENU
+  */
 
   var burgerOpen = false;
   $('.burger-menu').on('click', function(e) {
@@ -96,6 +103,53 @@ $(function(){
   $('.burger-menu-close').on('click', function(){
     $('.burger-menu-overlay').fadeOut(2000);
   });
+
+  /*
+    IMAGE SEQUENCE HERO
+  */
+
+  var heroImages = Array("images/couple-image.png",
+               "images/hero-7.jpg",
+               "images/hero-8.jpg");
+
+  var heroCurImage = 0;
+
+  function loadimg(){
+
+   $('#hero-cover').animate({ opacity: 1 }, 1000,function(){
+
+        //finished animating, minifade out and fade new back in
+        $('#hero-cover').animate({ opacity: 0.7 }, 200,function(){
+
+            heroCurImage++;
+
+            if(heroCurImage > heroImages.length-1){
+
+                heroCurImage = 0;
+
+            }
+
+            var newimage = heroImages[heroCurImage];
+
+            //swap out bg src
+            $('#hero-cover').css("background", "url(" +newimage+ ")");
+            $('#hero-cover').css("background-color", "black");
+
+            //animate fully back in
+            $('#hero-cover').animate({ opacity: 1 }, 400,function(){
+
+                //set timer for next
+                setTimeout(loadimg,5000);
+
+            });
+
+        });
+
+    });
+
+  }
+
+  setTimeout(loadimg,5000);
 });
 
 // blog
