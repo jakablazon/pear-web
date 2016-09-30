@@ -3009,9 +3009,9 @@ $(function(){
     IMAGE SEQUENCE HERO
   */
 
-  var heroImages = Array("images/couple-image.png",
-               "images/hero-7.jpg",
-               "images/hero-8.jpg");
+  var heroImages = Array("images/pear_hero_1.png",
+               "images/pear_hero_2.png",
+               "images/pear_hero_3.png");
 
   var heroCurImage = 0;
 
@@ -3051,6 +3051,16 @@ $(function(){
   }
 
   setTimeout(loadimg,5000);
+
+  /*
+    NOBEL PRIZE HEIGHT
+  */
+
+  if ($('#nobel-prize')) {
+    if ($('#nobel-prize').height() > 24) {
+      $('#nobel-prize').css('margin-top', -9);
+    }
+  }
 });
 
 // blog
