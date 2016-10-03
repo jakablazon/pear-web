@@ -19,6 +19,7 @@ $(function(){
   /*
     CAROUSEL BLOG
   */
+  
 
   if ($('.slick-carousel')[0]) {
     $('.slick-carousel').slick({
