@@ -7,7 +7,7 @@ $(function(){
   for (var i = 18; i < 100; i++) {
     data.push({id: i, text: i});
   }
-  //intitializing select
+  // intitializing select
   $('.select-age-home').select2({
     placeholder: "Age",
     minimumResultsForSearch: Infinity,
@@ -155,11 +155,11 @@ $(function(){
     NOBEL PRIZE HEIGHT
   */
 
-  if ($('#nobel-prize')) {
-    if ($('#nobel-prize').height() > 24) {
-      $('#nobel-prize').css('margin-top', -9);
-    }
-  }
+  // if ($('#nobel-prize')) {
+  //   if ($('#nobel-prize').height() > 24) {
+  //     $('#nobel-prize').css('margin-top', -9);
+  //   }
+  // }
 });
 
 // blog
