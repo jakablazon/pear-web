@@ -2927,6 +2927,7 @@ $(function(){
       speed: 300,
       slidesToShow: 3,
       slidesToScroll: 1,
+      infinite: false,
       responsive: [
         {
           breakpoint: 1024,
