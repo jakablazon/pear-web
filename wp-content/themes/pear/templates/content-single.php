@@ -9,7 +9,7 @@
 		</div>
 		<footer>
 			<?php wp_link_pages( [
-				'before' => '<nav class="page-nav"><p>' . __( 'Pages:', 'sage' ),
+				'before' => '<nav class="page-nav"><p>' . __( 'Pages:', 'pear' ),
 				'after'  => '</p></nav>'
 			] ); ?>
 		</footer>
