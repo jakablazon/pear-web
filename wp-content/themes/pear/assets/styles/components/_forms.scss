@@ -1,15 +1,33 @@
-// Search form
-.search-form {
-  @extend .form-inline;
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $color-grey-lightest2;
+  font-size: 20px;
+  outline: none;
+  padding-bottom: 10px;
+  color: $color-grey-light;
+
+  &.input-boxed {
+    height: 51px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 21px;
+    padding-top: 10px;
+    padding-left: 17px;
+  }
 }
-.search-form label {
-  font-weight: normal;
-  @extend .form-group;
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: $color-grey-lightest;
 }
-.search-form .search-field {
-  @extend .form-control;
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color: $color-grey-lightest;
+ opacity:  1;
 }
-.search-form .search-submit {
-  @extend .btn;
-  @extend .btn-secondary;
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color: $color-grey-lightest;
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: $color-grey-lightest;
 }

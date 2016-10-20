@@ -1,19 +1,70 @@
-@import "common/variables";
+/*----------------------------------*\
+    Pear Web Page
+\*----------------------------------*/
+/*
+ TABLE OF CONTENTS
+    01. Variables.......................Imported via gulp and can be found in _vars.scss
+    02. Global..........................The general styles like align-center etc.
+    03. Utilities.......................The general styles like align-center etc.
+    04. Layout..........................The general styles like align-center etc.
+    05. Components......................The general styles like align-center etc.
+*/
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
-// endbower
+/*
+	Libraries
+*/
 
-@import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/grid";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+@import "lib/slick/slick";
+@import "lib/select2.min.scss";
+
+/*import fonts*/
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MontserratBold";
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MontserratLight";
+    src: url("../fonts/Montserrat-Light.otf") format("truetype");
+}
+
+/*
+	Variables
+*/
+@import "vars";
+
+/*
+	Global
+*/
+@import "global";
+
+/*
+	Utilities
+*/
+@import "utilities/text";
+@import "utilities/spacing";
+
+
+/*
+	Layout
+*/
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+
+/*
+	Components
+*/
+
+@import "components/components";
+
+/*
+  Views
+*/
+
+@import 'views/views';

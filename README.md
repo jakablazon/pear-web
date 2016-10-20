@@ -5,11 +5,11 @@
 This is source repo for Pear Web page.
 
 ### Configuration ###
-Copy config-sample.json, rename it to config.json and change config proxy accordingly.
+Edit wp-content/themes/pear/assets/manifest.json file, change config devUrl accordingly.
 
 ### How do I build up the project? ###
 
-	$ cd to-your-local-repo
+	$ cd to-your-local-repo/wp-content/themes/pear
 	$ npm install
 	$ gulp build
 	$ gulp watch
