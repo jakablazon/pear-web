@@ -61,6 +61,7 @@ $(function () {
      BURGER MENU
      */
 
+    var burgerOpen = false;
     function openBurger() {
         $('.burger-menu').addClass('open');
         $('.burger-menu-overlay').fadeIn();
