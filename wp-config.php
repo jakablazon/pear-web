@@ -20,7 +20,7 @@
 
 $domain = $_SERVER['SERVER_NAME'];
 
-define( 'IS_LOCAL',   stristr( $domain, 'local' ) );
+define( 'IS_LOCAL',   stristr( $domain, '.local' ) );
 define( 'IS_STAGING', stristr( $domain, 'stage.' ) );
 define( 'IS_LIVE',    ! ( IS_STAGING || IS_LOCAL ) );
 
