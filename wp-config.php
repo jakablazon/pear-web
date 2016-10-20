@@ -35,7 +35,7 @@ define( 'WP_HOME',          $protocol . '://' . $domain );
 define( 'WP_CONTENT_DIR',   $_SERVER['DOCUMENT_ROOT'] . '/wp-content' );
 define( 'WP_CONTENT_URL',   $protocol . '://' . $domain . '/wp-content' );
 
-define( 'WP_DEFAULT_THEME', '' );
+define( 'WP_DEFAULT_THEME', 'pear' );
 
 
 if( IS_LOCAL ) {
