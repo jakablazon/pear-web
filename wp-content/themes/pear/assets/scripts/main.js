@@ -62,6 +62,7 @@ $(function () {
      */
 
     var burgerOpen = false;
+
     function openBurger() {
         $('.burger-menu').addClass('open');
         $('.burger-menu-overlay').fadeIn();
@@ -108,9 +109,9 @@ $(function () {
      IMAGE SEQUENCE HERO
      */
 
-    var heroImages = Array("images/pear_hero_1.png",
-        "images/pear_hero_2.png",
-        "images/pear_hero_3.png");
+    var heroImages = Array(wp_theme_home.uri + "/dist/images/pear_hero_1.png",
+        wp_theme_home.uri + "/dist/images/pear_hero_2.png",
+        wp_theme_home.uri + "/dist/images/pear_hero_3.png");
 
     var heroCurImage = 0;
 
