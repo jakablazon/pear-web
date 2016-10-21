@@ -19,3 +19,24 @@
 	<div class="burger-line burger-line-middle"></div>
 	<div class="burger-line burger-line-bottom"></div>
 </div>
+
+
+<?php if ( ! is_home() ) : ?>
+	<div id="top-nav" class="top-nav white static">
+		<span class="pear-logo"></span>
+		<div class="nav-container">
+			<div id="nav-home" class="nav-item clickable">
+				<a href="/">Home</a>
+			</div>
+			<div id="nav-about" class="nav-item clickable">
+				<a href="/#nav-about-trigger">About</a>
+			</div>
+			<div id="nav-blog" class="nav-item clickable">
+				<a href="/#nav-blog-trigger">Blog</a>
+			</div>
+			<div id="nav-support" class="nav-item clickable">
+				<a href="/#nav-support-trigger">Q &amp; A</a>
+			</div>
+		</div>
+	</div>
+<?php endif; ?>
