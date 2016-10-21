@@ -125,3 +125,22 @@ function remove_wp_trash() {
 }
 
 add_action( 'init', __NAMESPACE__ . '\\remove_wp_trash' );
+
+function pear_menu_page_remove() {
+	remove_menu_page( 'edit-comments.php' );
+	if ( ! current_user_can( 'create_users' ) ) {
+		remove_menu_page( 'tools.php' );
+	}
+}
+
+add_action( 'admin_menu', __NAMESPACE__ . '\\pear_menu_page_remove' );
+
+function pear_prevent_admin_access() {
+	if ( ! current_user_can( 'create_users' ) ) {
+		wp_die( "Sorry, you can't stay here." );
+		exit();
+	}
+}
+
+add_action( 'load-edit-comments.php', __NAMESPACE__ . '\\pear_prevent_admin_access' );
+add_action( 'load-tools.php', __NAMESPACE__ . '\\pear_prevent_admin_access' );;
