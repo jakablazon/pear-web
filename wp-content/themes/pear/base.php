@@ -16,7 +16,7 @@ use Roots\Sage\Wrapper;
 <![endif]-->
 <?php
 do_action( 'get_header' );
-get_template_part( 'templates/header-mobile' );
+get_template_part( 'templates/header' );
 ?>
 <main class="main">
 	<?php include Wrapper\template_path(); ?>

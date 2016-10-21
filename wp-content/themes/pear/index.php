@@ -1,7 +1,7 @@
 <div class="landing">
 	<div class="landing-home">
 		<div id="hero-cover" class="landing-main content">
-			<?php get_template_part( 'templates/header' ); ?>
+			<?php get_template_part( 'templates/header-home' ); ?>
 
 			<span id="nav-home-trigger"></span>
 			<div class="mid-section text-center">
