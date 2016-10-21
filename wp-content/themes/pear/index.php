@@ -146,55 +146,28 @@
 
 <div class="blog container">
 	<div class="posts-container pb40">
-		<div class="row">
-			<div class="col-xs-12">
-				<h4 class="text-uppercase mt40 mb40">Latest posts</h4>
-			</div>
-			<div class="slick-carousel-container">
-				<div class="slick-carousel">
-					<div class="text-center post">
-						<img src="<?= $path ?>/dist/images/blogArticle.png"/>
-						<p class="text-size-smd text-capitalize pl32 pr32 pb24">What do you do when the world feels
-							scary?</p>
-					</div>
-					<div class="text-center post">
-						<img src="<?= $path ?>/dist/images/blogArticle2.png"/>
-						<p class="text-size-smd text-capitalize pl32 pr32 pb24">Love Story: A Long One, But It's So
-							Good I Couldn't Resist.</p>
-					</div>
-
-					<div class="text-center post">
-						<img src="<?= $path ?>/dist/images/blogArticle.png"/>
-						<p class="text-size-smd text-capitalize pl32 pr32 pb24">What Do You Do When The World Feels
-							Scary?</p>
-					</div>
-
-					<div class="text-center post">
-						<img src="<?= $path ?>/dist/images/blogArticle2.png"/>
-						<p class="text-size-smd text-capitalize pl32 pr32 pb24">What Do You Do When The World Feels
-							Scary?</p>
-					</div>
-
-					<div class="text-center post">
-						<img src="<?= $path ?>/dist/images/blogArticle.png"/>
-						<p class="text-size-smd text-capitalize pl32 pr32 pb24">Love Story: We're Getting Closer - 1
-							Week Away!</p>
-					</div>
-
-					<div class="text-center post">
-						<img src="<?= $path ?>/dist/images/blogArticle2.png"/>
-						<p class="text-size-smd text-capitalize pl32 pr32 pb24">What do you do when the world feels
-							scary?</p>
+		<?php if ( have_posts() ): ?>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4 class="text-uppercase mt40 mb40">Latest posts</h4>
+				</div>
+				<div class="slick-carousel-container">
+					<div class="slick-carousel">
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format() ); ?>
+						<?php endwhile; ?>
 					</div>
 				</div>
 			</div>
-		</div>
+		<?php endif; ?>
+
 		<div class="mt48 text-color-grey text-center">
 			Follow us around
 		</div>
 		<div class="social-media-section mt32 mb32">
 			<a target="_blank" rel="nofollow" href="#" class="icon instagram-icon"></a>
-			<a target="_black" rel="nofollow" href="https://www.facebook.com/pear-715151941955999/" class="icon facebook-icon"></a>
+			<a target="_black" rel="nofollow" href="https://www.facebook.com/pear-715151941955999/"
+			   class="icon facebook-icon"></a>
 			<a target="_black" rel="nofollow" href="https://twitter.com/pearmeapp" class="icon twitter-icon"></a>
 		</div>
 	</div>

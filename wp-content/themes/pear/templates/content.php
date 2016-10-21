@@ -1,9 +1,4 @@
-<article <?php post_class(); ?>>
-	<header>
-		<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php get_template_part( 'templates/entry-meta' ); ?>
-	</header>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div>
-</article>
+<div <?php post_class( 'text-center post' ); ?>>
+	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+	<p class="text-size-smd text-capitalize pl32 pr32 pb24"><?php the_title(); ?></p>
+</div>
