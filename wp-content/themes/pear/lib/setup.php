@@ -85,10 +85,15 @@ function assets() {
 	wp_enqueue_style( 'sage/css', Assets\asset_path( 'styles/main.css' ), false, null );
 
 	wp_enqueue_script( 'sage/js', Assets\asset_path( 'scripts/main.js' ), null, false, true );
-	wp_enqueue_script( 'twitter', '//platform.twitter.com/widgets.js', ['sage/js'], false, true );
-	wp_enqueue_script( 'twitter', '//lightwidget.com/widgets/lightwidget.js', ['sage/js'], false, true );
+	wp_enqueue_script( 'twitter', '//platform.twitter.com/widgets.js', [ 'sage/js' ], false, true );
+	wp_enqueue_script( 'twitter', '//lightwidget.com/widgets/lightwidget.js', [ 'sage/js' ], false, true );
 
 	wp_localize_script( 'sage/js', 'wp_theme_home', [ 'uri' => get_template_directory_uri() ] );
+	wp_localize_script( 'sage/js', 'psf', [
+		'ajax_url'        => admin_url( 'admin-ajax.php' ),
+		'username_error'  => __( 'Please enter your name', 'pear' ),
+		'useremail_error' => __( 'Please enter your email address', 'pear' ),
+	] );
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100 );
@@ -143,4 +148,39 @@ function pear_prevent_admin_access() {
 }
 
 add_action( 'load-edit-comments.php', __NAMESPACE__ . '\\pear_prevent_admin_access' );
-add_action( 'load-tools.php', __NAMESPACE__ . '\\pear_prevent_admin_access' );;
+add_action( 'load-tools.php', __NAMESPACE__ . '\\pear_prevent_admin_access' );
+
+function psfSubmissionHandler() {
+	if ( ! isset( $_POST['psf_nonce'] ) || ! wp_verify_nonce( $_POST['psf_nonce'], 'psf_form_submit' ) ) {
+		die( json_encode( [
+			'status'  => 501,
+			'message' => "Not authorized!"
+		] ) );
+	} else {
+		global $wpdb;
+
+		$status = $wpdb->insert(
+			$wpdb->prefix . 'psf',
+			array(
+				'Name'  => filter_var( $_POST[ 'user_name' ], FILTER_SANITIZE_STRING ),
+				'Email' => filter_var( $_POST[ 'user_email' ], FILTER_SANITIZE_EMAIL ),
+				'Age'   => filter_var( $_POST[ 'user_age' ], FILTER_SANITIZE_NUMBER_INT ),
+			)
+		);
+
+		if ( $status ) {
+			die( json_encode( [
+				'status'  => 200,
+				'message' => 'Sign up successful!'
+			] ) );
+		} else {
+			die( json_encode( [
+				'status'  => 501,
+				'message' => 'Failed to insert into DB'
+			] ) );
+		}
+	}
+}
+
+add_action( 'wp_ajax_psf_form_submit', __NAMESPACE__ . '\\psfSubmissionHandler' );
+add_action( 'wp_ajax_nopriv_psf_form_submit', __NAMESPACE__ . '\\psfSubmissionHandler' );

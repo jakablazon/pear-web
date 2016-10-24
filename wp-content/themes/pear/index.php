@@ -4,30 +4,7 @@
 			<?php get_template_part( 'templates/header-home' ); ?>
 
 			<span id="nav-home-trigger"></span>
-			<div class="mid-section text-center">
-				<div class="pear-logo"></div>
-				<h1>Creating matches, the smart way</h1>
-				<p>COMING SOON</p>
-				<p class="mt0 mb32">Join our community to be among our beta testers or know when Pear will be available
-					in your city</p>
-				<div class="row join-form-container">
-					<div class="col-xs-12 col-sm-4">
-						<input class="input-boxed" type="text" placeholder="Name"/>
-					</div>
-					<div class="col-xs-12 col-sm-4">
-						<input class="input-boxed" type="text" placeholder="Email"/>
-					</div>
-					<div class="col-xs-12 col-sm-4 select-container" style="z-index:10">
-						<select class="select-age-home">
-							<option></option>
-						</select>
-					</div>
-				</div>
-				<div class="button green shadow text-uppercase button-join mt40">
-					Join now
-				</div>
-				<p class="mt24 we-promise">We promise to keep our emails to a minimum.</p>
-			</div>
+			<?php echo do_shortcode( '[PearSubForm]' ); ?>
 		</div>
 	</div>
 	<div id="menu-toggle-indicator"></div>

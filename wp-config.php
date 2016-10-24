@@ -115,6 +115,9 @@ define( 'NONCE_SALT', getenv( 'NONCE_SALT' ) );
 
 /**#@-*/
 
+define( 'DBI_AWS_ACCESS_KEY_ID', getenv( 'DBI_AWS_ACCESS_KEY_ID' ) );
+define( 'DBI_AWS_SECRET_ACCESS_KEY', getenv( 'DBI_AWS_SECRET_ACCESS_KEY' ) );
+
 /**
  * WordPress Database Table prefix.
  *
