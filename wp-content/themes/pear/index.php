@@ -79,10 +79,13 @@
 				others think about you.
 			</div>
 			<div class="col-xs-12 col-sm-4 about-subsection pr24">
-				<h2 class="text-uppercase text-center">The Pear report</h2>
-				<hr/>
-				Periodically, we will provide you with an individual report that will inform you of your own tastes and
-				of how you score with people of the other sex.
+				<a href="<?php echo get_template_directory_uri() ?>/dist/files/Pear Attractiveness Report.pdf">
+					<h2 class="text-uppercase text-center">The Pear report</h2>
+					<hr/>
+					Periodically, we will provide you with an individual report that will inform you of your own tastes
+					and
+					of how you score with people of the other sex.
+				</a>
 			</div>
 			<div class="col-xs-12 col-sm-4 about-subsection pr24">
 				<h2 class="text-uppercase text-center">Support us</h2>
