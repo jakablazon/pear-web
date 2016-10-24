@@ -1,6 +1,20 @@
-@@include('./_includes/head.html', {
-	"title": "Home"
-})
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="description" content="Pear Web Page">
+		<title>Pear Web | Home</title>
+		<!-- Custom styles for this template -->
+		<!-- Built main.css style -->
+		<link href="styles/main.css" rel="stylesheet">
+		<!-- End Built css -->
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+	</head>
+	<body>
+
 <div class="burger-menu-overlay">
 	<div></div>
 	<div id="nav-home" class="nav-item clickable">
@@ -25,7 +39,24 @@
 <div class="landing">
 	<div class="landing-home">
 		<div id="hero-cover" class="landing-main content" >
-			@@include('./_includes/top_nav.html')
+			<div id="top-nav" class="top-nav">
+  <span class="pear-logo"></span>
+  <div class="nav-container">
+    <div id="nav-home" class="nav-item text-regular clickable">
+      Home
+    </div>
+    <div id="nav-about" class="nav-item text-regular clickable">
+      About
+    </div>
+    <div id="nav-blog" class="nav-item text-regular clickable">
+      Blog
+    </div>
+    <div id="nav-support" class="nav-item text-regular clickable">
+      Support
+    </div>
+  </div>
+</div>
+
 			<span id="nav-home-trigger"></span>
 			<div class="mid-section text-center">
 				<div class="pear-logo"></div>
@@ -341,4 +372,20 @@
 
 </div>
 
-@@include('./_includes/footer.html')
+	<footer class="flex--justify-center pt32 pb32 mb24 text-center">
+		<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="https://www.dropbox.com/sh/n8ocqhghj0r0gmd/AAComVxf6TKP9sjD0XX2mTeAa?dl=0">Press kit</a>
+		<span class="bullet ml16 mr16"></span>
+		<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="/terms.html">Terms and conditions</a>
+		<span class="bullet ml16 mr16"></span>
+		<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="/privacy.html">Privacy</a>
+		<span class="bullet ml16 mr16"></span>
+		<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="mailto:support@pear.me">Contact</a>
+		<span class="bullet ml16 mr16"></span>
+		<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="http://www.algorithmicmatching.com">Algorithmic Matching</a>
+	</footer>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="//lightwidget.com/widgets/lightwidget.js"></script>
+	<script src="scripts/main.js"></script>
+	</body>
+</html>
+
