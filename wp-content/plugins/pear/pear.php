@@ -4,7 +4,7 @@
 Plugin Name: Pear Subscription Form
 Description: Frontpage subscription form
 Author: PovioLabs
-Version: 1.0.0
+Version: 1.1.0
 */
 
 class PearSubscriptionForm {
@@ -104,13 +104,20 @@ class PearSubscriptionForm {
 			`Name` VARCHAR(255) NOT NULL ,
 			`Email` VARCHAR(255) NOT NULL ,
 			`Age` TINYINT NOT NULL ,
+			`Location` VARCHAR(255) ,
 			PRIMARY KEY (`ID`),
 		  	UNIQUE KEY `Email` (`Email`)) $charset_collate;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
 
-		add_option( 'psf_db_version', '1.0' );
+		update_option( "psf_db_version", '1.1' );
+	}
+
+	static function psf_update_db_check() {
+		if ( get_site_option( 'jal_db_version' ) != '1.1' ) {
+			PearSubscriptionForm::psf_install();
+		}
 	}
 
 	static function form() {
@@ -153,6 +160,7 @@ add_action( 'plugins_loaded', function () {
 } );
 
 register_activation_hook( __FILE__, array( 'PearSubscriptionForm', 'psf_install' ) );
+add_action( 'plugins_loaded', array( 'PearSubscriptionForm', 'psf_update_db_check' ) );
 add_shortcode( 'PearSubForm', array( 'PearSubscriptionForm', 'form' ) );
 
 
