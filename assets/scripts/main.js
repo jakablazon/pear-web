@@ -152,6 +152,16 @@ $(function(){
 
   setTimeout(loadimg,5000);
 
+
+  window.startLoading = function() {
+    $('.join-text').addClass('inactive');
+    $('.loader').removeClass('inactive');
+  }
+
+  window.endLoading = function() {
+    $('.join-text').removeClass('inactive');
+    $('.loader').addClass('inactive');
+  }
   /*
     NOBEL PRIZE HEIGHT
   */

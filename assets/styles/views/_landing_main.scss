@@ -107,6 +107,13 @@
       }
     }
   }
+
+  .join-text {
+
+    &.inactive {
+      display: none;
+    }
+  }
 }
 
 .hero-title {
