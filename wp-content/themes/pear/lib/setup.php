@@ -90,9 +90,10 @@ function assets() {
 
 	wp_localize_script( 'sage/js', 'wp_theme_home', [ 'uri' => get_template_directory_uri() ] );
 	wp_localize_script( 'sage/js', 'psf', [
-		'ajax_url'        => admin_url( 'admin-ajax.php' ),
-		'username_error'  => __( 'Please enter your name', 'pear' ),
-		'useremail_error' => __( 'Please enter your email address', 'pear' ),
+		'ajax_url'            => admin_url( 'admin-ajax.php' ),
+		'username_error'      => __( 'Please enter your name', 'pear' ),
+		'useremail_error'     => __( 'Please enter your email address', 'pear' ),
+		'useremail_wpdberror' => __( 'Email is already subscribed!', 'pear' ),
 	] );
 }
 
@@ -154,6 +155,7 @@ function psfSubmissionHandler() {
 	if ( ! isset( $_POST['psf_nonce'] ) || ! wp_verify_nonce( $_POST['psf_nonce'], 'psf_form_submit' ) ) {
 		die( json_encode( [
 			'status'  => 501,
+			'title'   => 'Error',
 			'message' => "Not authorized!"
 		] ) );
 	} else {
@@ -162,21 +164,17 @@ function psfSubmissionHandler() {
 		$status = $wpdb->insert(
 			$wpdb->prefix . 'psf',
 			array(
-				'Name'  => filter_var( $_POST[ 'user_name' ], FILTER_SANITIZE_STRING ),
-				'Email' => filter_var( $_POST[ 'user_email' ], FILTER_SANITIZE_EMAIL ),
-				'Age'   => filter_var( $_POST[ 'user_age' ], FILTER_SANITIZE_NUMBER_INT ),
+				'Name'  => filter_var( $_POST['user_name'], FILTER_SANITIZE_STRING ),
+				'Email' => filter_var( $_POST['user_email'], FILTER_SANITIZE_EMAIL ),
+				'Age'   => filter_var( $_POST['user_age'], FILTER_SANITIZE_NUMBER_INT ),
 			)
 		);
 
 		if ( $status ) {
 			die( json_encode( [
 				'status'  => 200,
-				'message' => 'Sign up successful!'
-			] ) );
-		} else {
-			die( json_encode( [
-				'status'  => 501,
-				'message' => 'Failed to insert into DB'
+				'title'   => 'Success',
+				'message' => __( 'Sign up successful!', 'pear' )
 			] ) );
 		}
 	}

@@ -32,7 +32,8 @@ class PearSubscriptionForm {
 			`Name` VARCHAR(255) NOT NULL ,
 			`Email` VARCHAR(255) NOT NULL ,
 			`Age` TINYINT NOT NULL ,
-			PRIMARY KEY (`ID`) ) $charset_collate;";
+			PRIMARY KEY (`ID`),
+		  	UNIQUE KEY `Email` (`Email`)) $charset_collate;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
@@ -62,7 +63,8 @@ class PearSubscriptionForm {
 				<?php echo wp_nonce_field( 'psf_form_submit', 'psf_nonce', true, false ); ?>
 			</div>
 			<div id="psf-submit" class="button green shadow text-uppercase button-join mt40">
-				Join now
+				<span class="join-text">Join now</span>
+				<img class="loader inactive" src="<?php echo get_template_directory_uri(); ?>/dist/images/loader.svg" />
 			</div>
 			<p class="mt24 we-promise">We promise to keep our emails to a minimum.</p>
 			<p class="mt0 mb32">Join our community to be among our beta testers or know when Pear will be available

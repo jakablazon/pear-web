@@ -62,25 +62,6 @@ $(function () {
      */
 
     var burgerOpen = false;
-    $('.burger-menu').on('click', function (e) {
-
-        if (!burgerOpen) {
-            openBurger();
-        } else {
-            closeBurger();
-        }
-
-
-        e.preventDefault();
-
-    });
-
-    $(document).on("click", ".nav-item", function (e) {
-        if (burgerOpen) {
-            closeBurger();
-        }
-    });
-
     function openBurger() {
         $('.burger-menu').addClass('open');
         $('.burger-menu-overlay').fadeIn();
@@ -100,6 +81,25 @@ $(function () {
         burgerOpen = false;
     }
 
+    $('.burger-menu').on('click', function (e) {
+
+        if (!burgerOpen) {
+            openBurger();
+        } else {
+            closeBurger();
+        }
+
+
+        e.preventDefault();
+
+    });
+
+    $(document).on("click", ".nav-item", function (e) {
+        if (burgerOpen) {
+            closeBurger();
+        }
+    });
+
     $('.burger-menu-close').on('click', function () {
         $('.burger-menu-overlay').fadeOut(2000);
     });
@@ -108,9 +108,9 @@ $(function () {
      IMAGE SEQUENCE HERO
      */
 
-    var heroImages = Array("images/pear_hero_1.png",
-        "images/pear_hero_2.png",
-        "images/pear_hero_3.png");
+    var heroImages = Array(wp_theme_home.uri + "/dist/images/pear_hero_1.png",
+        wp_theme_home.uri + "/dist/images/pear_hero_2.png",
+        wp_theme_home.uri + "/dist/images/pear_hero_3.png");
 
     var heroCurImage = 0;
 
@@ -155,12 +155,12 @@ $(function () {
     window.startLoading = function () {
         $('.join-text').addClass('inactive');
         $('.loader').removeClass('inactive');
-    }
+    };
 
     window.endLoading = function () {
         $('.join-text').removeClass('inactive');
         $('.loader').addClass('inactive');
-    }
+    };
 
     /*
      NOBEL PRIZE HEIGHT

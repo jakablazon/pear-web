@@ -38,24 +38,21 @@ jQuery(function ($) {
                         user_email.val('');
                         user_age.find(":selected").removeAttr("selected");
 
-                        console.log(response);
-                        // $("#response-text").html(response.message).show();
+                        toastr.success(response.title, response.message);
                     } else {
-                        console.log(response);
-                        // $("#response-text").html(response.message).show();
-                        // $("#contact-submit").slideUp(200, "linear");
+                        toastr.error(response.title, response.message);
                     }
                 },
                 error: function (MLHttpRequest, textStatus, errorThrown) {
-                    // console.log(MLHttpRequest);
-                    // console.log(textStatus);
-                    // console.log(errorThrown);
+                    if ( MLHttpRequest.responseText.indexOf('Duplicate entry') ) {
+                        toastr.error('Error', psf.useremail_wpdberror);
+                    }
                 },
                 beforeSend: function () {
-                    // $('#popup-loading').show();
+                    window.startLoading();
                 },
                 complete: function () {
-                    // $("#popup-loading").hide();
+                    window.endLoading();
                 }
             });
         }
