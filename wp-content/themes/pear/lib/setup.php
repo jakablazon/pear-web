@@ -3,6 +3,8 @@
 namespace Roots\Sage\Setup;
 
 use Roots\Sage\Assets;
+use GeoIp2\Database\Reader;
+
 
 /**
  * Theme setup
@@ -161,12 +163,38 @@ function psfSubmissionHandler() {
 	} else {
 		global $wpdb;
 
+		if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} else {
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+
+		$reader = new Reader( $_SERVER['DOCUMENT_ROOT'] . '/GeoLite2-City.mmdb' );
+		try {
+			$record = $reader->city( $ip );
+		} catch ( \Exception $e ) {
+			// geoip can't read ip data, do nothing
+		}
+
+		if ( isset( $record->city->name ) ) {
+			$location = $record->city->name;
+		} elseif ( isset( $record->country->name ) ) {
+			$location = $record->country->name;
+		} elseif ( isset( $record->continent->name ) ) {
+			$location = $record->continent->name;
+		} else {
+			$location = 'N/A';
+		}
+
 		$status = $wpdb->insert(
 			$wpdb->prefix . 'psf',
 			array(
-				'Name'  => filter_var( $_POST['user_name'], FILTER_SANITIZE_STRING ),
-				'Email' => filter_var( $_POST['user_email'], FILTER_SANITIZE_EMAIL ),
-				'Age'   => filter_var( $_POST['user_age'], FILTER_SANITIZE_NUMBER_INT ),
+				'Name'     => filter_var( $_POST['user_name'], FILTER_SANITIZE_STRING ),
+				'Email'    => filter_var( $_POST['user_email'], FILTER_SANITIZE_EMAIL ),
+				'Age'      => filter_var( $_POST['user_age'], FILTER_SANITIZE_NUMBER_INT ),
+				'Location' => $location,
 			)
 		);
 

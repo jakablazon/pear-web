@@ -44,7 +44,7 @@ jQuery(function ($) {
                     }
                 },
                 error: function (MLHttpRequest, textStatus, errorThrown) {
-                    if ( MLHttpRequest.responseText.indexOf('Duplicate entry') ) {
+                    if ( MLHttpRequest.responseText.indexOf('Duplicate entry') != -1 ) {
                         toastr.error('Error', psf.useremail_wpdberror);
                     }
                 },

@@ -9,6 +9,9 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
+
+require_once( $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php' );
+
 $sage_includes = [
 	'lib/acf.php',       // ACF files
 	'lib/assets.php',    // Scripts and stylesheets
