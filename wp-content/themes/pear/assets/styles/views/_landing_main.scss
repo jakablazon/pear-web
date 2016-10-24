@@ -1,3 +1,11 @@
+.pear-logo {
+  background: url('../images/pear-logo-color-white.svg') center no-repeat;
+  width: 103px;
+  height: 141px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .landing {
   * {
     font-family: 'MontserratLight';
@@ -43,14 +51,6 @@
           .input-boxed {
             margin-bottom: 10px;
           }
-        }
-
-        .pear-logo {
-          background: url('../images/pear-logo-color-white.svg') center no-repeat;
-          width: 103px;
-          height: 141px;
-          margin-left: auto;
-          margin-right: auto;
         }
 
         .we-promise {
@@ -105,6 +105,13 @@
           margin-bottom: 18px;
         }
       }
+    }
+  }
+
+  .join-text {
+
+    &.inactive {
+      display: none;
     }
   }
 }

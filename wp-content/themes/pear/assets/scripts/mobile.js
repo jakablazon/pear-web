@@ -13,7 +13,7 @@ $(function () { // wait for document ready
 		var viewTransition = 150;
 		var baseOffset = 260;
 
-		var sceneIphone = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewVisible * 6 + viewTransition * 5 , offset: baseOffset})
+		var sceneIphone = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewVisible * 5 + viewTransition * 4 , offset: baseOffset})
 						.setPin("#iphone")
 						.addTo(controller);
 
@@ -49,13 +49,13 @@ $(function () { // wait for document ready
 			.to(".title-4", 0.1, {opacity: 0})
 			.to(".title-5", 0.1, {opacity: 1});
 
-		var tween5_shot = new TimelineMax()
-			.to(".shot-5", 0.1, {opacity: 0})
-			.to(".shot-6", 0.1, {opacity: 1})
-
-		var tween5_text = new TimelineMax()
-			.to(".title-5", 0.1, {opacity: 0})
-			.to(".title-6", 0.1, {opacity: 1});
+		// var tween5_shot = new TimelineMax()
+		// 	.to(".shot-5", 0.1, {opacity: 0})
+		// 	.to(".shot-6", 0.1, {opacity: 1})
+		//
+		// var tween5_text = new TimelineMax()
+		// 	.to(".title-5", 0.1, {opacity: 0})
+		// 	.to(".title-6", 0.1, {opacity: 1});
 
 
 		var shotTrans1_2 = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewTransition, offset: viewVisible * 1 + viewTransition * 0 + baseOffset })
@@ -90,13 +90,13 @@ $(function () { // wait for document ready
 						.setTween(tween4_text)
 						.addTo(controller);
 
-		var shotTrans5_6 = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewTransition, offset: viewVisible * 5 + viewTransition * 4 + baseOffset})
-						.setTween(tween5_shot)
-						.addTo(controller);
-
-		var textTrans5_6 = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewTransition, offset: viewVisible * 5 + viewTransition * 4 + baseOffset})
-						.setTween(tween5_text)
-						.addTo(controller);
+		// var shotTrans5_6 = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewTransition, offset: viewVisible * 5 + viewTransition * 4 + baseOffset})
+		// 				.setTween(tween5_shot)
+		// 				.addTo(controller);
+		//
+		// var textTrans5_6 = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: viewTransition, offset: viewVisible * 5 + viewTransition * 4 + baseOffset})
+		// 				.setTween(tween5_text)
+		// 				.addTo(controller);
 
 
 		// var sceneShot2 = new ScrollMagic.Scene({triggerElement: "#iphone-trigger", duration: 50, offset: 150})

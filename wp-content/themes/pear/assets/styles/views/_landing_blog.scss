@@ -14,7 +14,7 @@
 }
 
 .blog {
-  
+
   @media #{$small-and-up} {
     .padding-left {
       padding-left: 24px;
@@ -103,6 +103,9 @@
     @media #{$extra-small-and-down} {
       width: 70%;
       margin: 0 auto;
+    }
+    .slick-arrow.slick-disabled {
+      display: none !important;
     }
   }
 
