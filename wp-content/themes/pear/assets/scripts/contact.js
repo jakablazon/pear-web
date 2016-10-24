@@ -36,7 +36,7 @@ jQuery(function ($) {
                     if (response.status === 200) {
                         user_name.val('');
                         user_email.val('');
-                        user_age.find(":selected").removeAttr("selected");
+                        $("#select2-age-container").html('<span class="select2-selection__placeholder">Age</span>');
 
                         toastr.success(response.title, response.message);
                     } else {
