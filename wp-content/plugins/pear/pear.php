@@ -73,7 +73,8 @@ class PearSubscriptionForm {
 							<form method="post">
 								<?php
 								$this->subscription_obj->prepare_items();
-								$this->subscription_obj->display(); ?>
+								$this->subscription_obj->display();
+								?>
 							</form>
 						</div>
 					</div>
@@ -241,7 +242,7 @@ class Subscriptions_List extends WP_List_Table {
 
 	/** Text displayed when no subscriber data is available */
 	public function no_items() {
-		_e( 'No subscriptions avaliable.', 'pear' );
+		_e( 'No subscriptions.', 'pear' );
 	}
 
 	/**
@@ -259,7 +260,7 @@ class Subscriptions_List extends WP_List_Table {
 		$title = '<strong>' . $item['Name'] . '</strong>';
 
 		$actions = [
-			'delete' => sprintf( '<a href="?page=%s&action=%s&subscriber=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['ID'] ), $delete_nonce )
+//			'delete' => sprintf( '<a href="?page=%s&action=%s&subscriber=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['ID'] ), $delete_nonce )
 		];
 
 		return $title . $this->row_actions( $actions );
@@ -278,6 +279,7 @@ class Subscriptions_List extends WP_List_Table {
 			case 'Email':
 			case 'Name':
 			case 'Age':
+			case 'Location':
 				return $item[ $column_name ];
 			default:
 				return print_r( $item, true ); //Show the whole array for troubleshooting purposes
@@ -292,9 +294,9 @@ class Subscriptions_List extends WP_List_Table {
 	 * @return string
 	 */
 	function column_cb( $item ) {
-		return sprintf(
-			'<input type="checkbox" name="bulk-delete[]" value="%s" />', $item['ID']
-		);
+//		return sprintf(
+//			'<input type="checkbox" name="bulk-delete[]" value="%s" />', $item['ID']
+//		);
 	}
 
 	/**
@@ -304,10 +306,11 @@ class Subscriptions_List extends WP_List_Table {
 	 */
 	function get_columns() {
 		$columns = [
-			'cb'    => '<input type="checkbox" />',
-			'name'  => __( 'Name', 'pear' ),
-			'Email' => __( 'Email', 'pear' ),
-			'Age'   => __( 'Age', 'pear' )
+			'cb'       => '<input type="checkbox" />',
+			'name'     => __( 'Name', 'pear' ),
+			'Email'    => __( 'Email', 'pear' ),
+			'Age'      => __( 'Age', 'pear' ),
+			'Location' => __( 'Location', 'pear' )
 		];
 
 		return $columns;
@@ -320,8 +323,10 @@ class Subscriptions_List extends WP_List_Table {
 	 */
 	public function get_sortable_columns() {
 		$sortable_columns = array(
-			'Name'  => array( 'Name', true ),
-			'Email' => array( 'Email', false )
+			'Name'     => array( 'Name', true ),
+			'Email'    => array( 'Email', false ),
+			'Age'      => array( 'Age', false ),
+			'Location' => array( 'Location', false ),
 		);
 
 		return $sortable_columns;
@@ -334,7 +339,7 @@ class Subscriptions_List extends WP_List_Table {
 	 */
 	public function get_bulk_actions() {
 		$actions = [
-			'bulk-delete' => 'Delete'
+//			'bulk-delete' => 'Delete'
 		];
 
 		return $actions;
