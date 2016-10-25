@@ -43,11 +43,6 @@ jQuery(function ($) {
                         toastr.error(response.title, response.message);
                     }
                 },
-                error: function (MLHttpRequest, textStatus, errorThrown) {
-                    if ( MLHttpRequest.responseText.indexOf('Duplicate entry') != -1 ) {
-                        toastr.error('Error', psf.useremail_wpdberror);
-                    }
-                },
                 beforeSend: function () {
                     window.startLoading();
                 },

@@ -204,6 +204,12 @@ function psfSubmissionHandler() {
 				'title'   => 'Success',
 				'message' => __( 'Sign up successful!', 'pear' )
 			] ) );
+		} else {
+			die( json_encode( [
+				'status'  => 409,
+				'title'   => 'Error',
+				'message' => __( 'Email is already subscribed!', 'pear' )
+			] ) );
 		}
 	}
 }
