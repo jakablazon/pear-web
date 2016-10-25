@@ -26,7 +26,7 @@
 				among them.
 			</div>
 			<div class="col-xs-12 col-sm-3 about-subsection pr24">
-				<h2 id="nobel-prize" class="text-uppercase text-center">Nobel prize matches</h2>
+				<h2 class="text-uppercase text-center">Nobel Matches</h2>
 				<hr/>
 				Matches are found using a Nobel prize winning algorithm, developed by mathematicians David Gale and
 				Lloyd Shapley --- published in a work that they titled, we kid you not, "The Stability of Marriage".
@@ -43,21 +43,15 @@
 			<div id=iphone-trigger></div>
 			<div id="iphone" class="iphone-image">
 				<div class="title-container">
-					<div class="title-1 title text-uppercase text-color-green text-size-smd">1. Create an account</div>
-					<div class="title-2 title text-uppercase text-color-green text-size-smd opacity">2. Create your
-						profile
+					<div class="title-1 title text-regular text-uppercase text-color-green text-size-smd">Create an account
 					</div>
-					<div class="title-3 title text-uppercase text-color-green text-size-smd opacity">3. Start
-						comparing
+					<div class="title-2 title text-regular text-uppercase text-color-green text-size-smd opacity">Edit your profile
 					</div>
-					<div class="title-4 title text-uppercase text-color-green text-size-smd opacity">4. Explore
-						profiles
+					<div class="title-3 title text-regular text-uppercase text-color-green text-size-smd opacity">Start comparing
 					</div>
-					<div class="title-5 title text-uppercase text-color-green text-size-smd opacity">5. See your
-						comparisons
+					<div class="title-4 title text-regular text-uppercase text-color-green text-size-smd opacity">Meet your matches
 					</div>
-					<div class="title-6 title text-uppercase text-color-green text-size-smd opacity">6. Chat and pear
-						up
+					<div class="title-5 title text-regular text-uppercase text-color-green text-size-smd opacity">Chat and pear up
 					</div>
 				</div>
 				<?php $path = get_template_directory_uri(); ?>
@@ -71,52 +65,48 @@
 			</div>
 		</div>
 
-		<div class="row mt96 mb96 l24 pr24 about-subsection-container">
+		<div class="row mt96 mb96 pl24 pr24 about-subsection-container">
 			<div class="col-xs-12 col-sm-4 about-subsection">
 				<h2 class="text-uppercase text-center">Know yourself</h2>
 				<hr/>
-				Besides helping you making new friends, we want to improve your knowledge about what you like and what
-				others think about you.
+				Besides helping you making new friends, we want to improve your knowledge about what you like and what others think about you.
 			</div>
 			<div class="col-xs-12 col-sm-4 about-subsection pr24">
-				<a href="<?php echo get_template_directory_uri() ?>/dist/files/Pear Attractiveness Report.pdf">
+				<a href="<?php echo get_template_directory_uri() ?>/dist/files/Pear Attractiveness Report.pdf" target="_blank">
 					<h2 class="text-uppercase text-center">The Pear report</h2>
 					<hr/>
-					Periodically, we will provide you with an individual report that will inform you of your own tastes
-					and
-					of how you score with people of the other sex.
+					Periodically, we will provide you with an individual report that will inform you of your own tastes and of how you score with people of the other sex.
 				</a>
 			</div>
 			<div class="col-xs-12 col-sm-4 about-subsection pr24">
 				<h2 class="text-uppercase text-center">Support us</h2>
 				<hr/>
-				Pear is free but please note, our individual reports will be made available to those with a premium
-				membership. We value you using our product but we would also love your support.
+				Pear is free but please note, our individual reports will be made available to those with a premium membership. We value you using our product but we would also love your support.
 			</div>
 		</div>
 
 		<!-- <div class="row about-subsection-container mt96 mb96 pl24 pr24">
-			<div class="col-xs-12 col-sm-3 about-subsection ">
-				<h2 class="text-uppercase text-center">Online dating today</h2>
-				<hr />
-				Online dating has been growing steadily in popularity. Roughly, about 1 in 5 relationships now start online in the UK and US.
-			</div>
-			<div class="col-xs-12 col-sm-3 about-subsection pr24">
-				<h2 class="text-uppercase text-center">Congestion problem</h2>
-				<hr />
-				Online dating suffers from a congestion problem. Women tend to receive a large number of messages/swipes from male users and often, they are unable to distinguish real interest from spam.
-			</div>
-			<div class="col-xs-12 col-sm-3 about-subsection pr24">
-				<h2 class="text-uppercase text-center">How we solve it</h2>
-				<hr />
-				pear solves the problem by only offering high-quality matches. If we match you with someone, you know there’s no one else that you rank higher, who also ranks you above their own matches.
-			</div>
-			<div class="col-xs-12 col-sm-3 about-subsection pr24">
-				<h2 class="text-uppercase text-center">Will it work?</h2>
-				<hr />
-				The algorithm we use isn’t just a beautiful mathematical idea. Research suggests it fares extremely well in predicting real life dating and marriage patterns.
-			</div>
-		</div> -->
+            <div class="col-xs-12 col-sm-3 about-subsection ">
+                <h2 class="text-uppercase text-center">Online dating today</h2>
+                <hr />
+                Online dating has been growing steadily in popularity. Roughly, about 1 in 5 relationships now start online in the UK and US.
+            </div>
+            <div class="col-xs-12 col-sm-3 about-subsection pr24">
+                <h2 class="text-uppercase text-center">Congestion problem</h2>
+                <hr />
+                Online dating suffers from a congestion problem. Women tend to receive a large number of messages/swipes from male users and often, they are unable to distinguish real interest from spam.
+            </div>
+            <div class="col-xs-12 col-sm-3 about-subsection pr24">
+                <h2 class="text-uppercase text-center">How we solve it</h2>
+                <hr />
+                pear solves the problem by only offering high-quality matches. If we match you with someone, you know there’s no one else that you rank higher, who also ranks you above their own matches.
+            </div>
+            <div class="col-xs-12 col-sm-3 about-subsection pr24">
+                <h2 class="text-uppercase text-center">Will it work?</h2>
+                <hr />
+                The algorithm we use isn’t just a beautiful mathematical idea. Research suggests it fares extremely well in predicting real life dating and marriage patterns.
+            </div>
+        </div> -->
 	</div>
 
 	<div id="nav-blog-trigger"></div>
@@ -146,34 +136,33 @@
 				Follow us around
 			</div>
 			<div class="social-media-section mt32 mb32">
-				<a target="_blank" rel="nofollow" href="#" class="icon instagram-icon"></a>
-				<a target="_black" rel="nofollow" href="https://www.facebook.com/pear-715151941955999/"
-				   class="icon facebook-icon"></a>
-				<a target="_black" rel="nofollow" href="https://twitter.com/pearmeapp" class="icon twitter-icon"></a>
+				<a target="_blank" href="https://www.instagram.com/pearmeapp/" class="icon instagram-icon"></a>
+				<a target="_blank" href="https://www.facebook.com/pear-715151941955999/" class="icon facebook-icon"></a>
+				<a target="_blank" href="https://twitter.com/pearmeapp" class="icon twitter-icon"></a>
 			</div>
 		</div>
 
 		<!-- <div class="integrations">
-		  <div class="row">
-			<div class="col-xs-12 col-sm-4 padding-right">
-			  <h4 class="text-uppercase">Twitter</h4>
-			  <a class="twitter-timeline" height="437"
-				href="https://twitter.com/TwitterDev">
-			  Tweets by @TwitterDev
-			  </a>
-			</div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 padding-right">
+              <h4 class="text-uppercase">Twitter</h4>
+              <a class="twitter-timeline" height="437"
+                href="https://twitter.com/TwitterDev">
+              Tweets by @TwitterDev
+              </a>
+            </div>
 
-			<div class="col-xs-12 col-sm-4 padding-center">
-			  <h4 class="text-uppercase">Instagram</h4>
-			  <iframe src="//lightwidget.com/widgets/1cf089dc79ec5cf783444b7318d87984.html" id="lightwidget_1cf089dc79" name="lightwidget_1cf089dc79"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-			</div>
+            <div class="col-xs-12 col-sm-4 padding-center">
+              <h4 class="text-uppercase">Instagram</h4>
+              <iframe src="//lightwidget.com/widgets/1cf089dc79ec5cf783444b7318d87984.html" id="lightwidget_1cf089dc79" name="lightwidget_1cf089dc79"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+            </div>
 
-			<div class="col-xs-12 col-sm-4 padding-left">
-			  <h4 class="text-uppercase">Facebook</h4>
-			  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=437&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1694822130750294" width="100%" height="437" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-			</div>
-		  </div>
-		</div> -->
+            <div class="col-xs-12 col-sm-4 padding-left">
+              <h4 class="text-uppercase">Facebook</h4>
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=437&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1694822130750294" width="100%" height="437" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+          </div>
+        </div> -->
 
 	</div>
 
@@ -231,8 +220,75 @@
 			</div>
 		</div>
 
-		<div class="button white shadow text-uppercase button-join">
+		<div class="button green shadow text-uppercase button-join">
 			Show all Q&A
 		</div>
 	</div>
+
+	<!-- <div id="nav-media-trigger"></div>
+    <div class="landing-press mb24 pb9">
+        <div class="hero-title press-title mb96">
+            <h1 class="text-center"> We would LOVE to share our story <br/> and our results.</h1>
+        </div>
+
+        <div class="press-content row pb48">
+            <div class="col-xs-12 col-sm-7">
+                <p>
+                    If you are a journalist, blogger or member of the media, please feel free to contact us!
+                </p>
+                <p class="mt32">
+                    We would be more than happy to talk to you.
+                </p>
+                <p class="mt32">
+                    Download our press kit here or contact <a class="text-link text-underline" href="mailto:xxx@xxx.com">xxx@xxx.com</a>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+                <div class="pear-logo"></div>
+                <div class="button green shadow text-uppercase button-download-kit mt40">
+                    PEAR_PRESS_KIT_2016.zip
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+	<!-- <div id="nav-launch-trigger"></div>
+	<div class="landing-launch text-center pt24 mb96">
+		<div class="pear-logo mt84"></div>
+		<h1 class="text-uppercase mt32">
+			Know when we visit your city <br/>
+			to know when we launch in your city
+		</h1>
+		<p class="mt24">
+			Join our community to know when we are in your city. Vip access to</br>
+			the app and our launch night.
+		</p>
+		<p class="mt32">
+			Join our community to be among our beta tester or know when Pear will be available in your city.
+		</p>
+
+		<div class="landing-join mt84">
+			<div class="form-join row">
+				<div class="col-xs-12 col-sm-4">
+					<input type="text" placeholder="Name" />
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<input type="text" placeholder="Email" />
+				</div>
+				<div class="col-xs-12 col-sm-4 select-container input-line">
+					<select class="select-age-home">
+						<option></option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="button green shadow text-uppercase button-join mt56">
+			Join now
+		</div>
+		<div class="we-promise mt24">
+			We promise to keep our emails to a minimum
+		</div>
+	</div> -->
+
 </div>

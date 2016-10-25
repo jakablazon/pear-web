@@ -11,7 +11,7 @@
 			Blog
 		</div>
 		<div id="nav-support" class="nav-item clickable">
-			Q &amp; A
+			Support
 		</div>
 	</nav>
 </header>

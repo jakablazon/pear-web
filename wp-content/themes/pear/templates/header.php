@@ -11,7 +11,7 @@
 			<a href="/#nav-blog-trigger">Blog</a>
 		</div>
 		<div id="nav-support" class="nav-item clickable">
-			<a href="/#nav-support-trigger">Q &amp; A</a>
+			<a href="/#nav-support-trigger">Support</a>
 		</div>
 		<div></div>
 	</div>
@@ -33,7 +33,7 @@
 				<a href="/#nav-blog-trigger">Blog</a>
 			</div>
 			<div id="nav-support" class="nav-item clickable">
-				<a href="/#nav-support-trigger">Q &amp; A</a>
+				<a href="/#nav-support-trigger">Support</a>
 			</div>
 		</div>
 	</div>
@@ -50,7 +50,7 @@
 			Blog
 		</div>
 		<div id="nav-support" class="nav-item clickable">
-			Q &amp; A
+			Support
 		</div>
 		<div></div>
 	</div>

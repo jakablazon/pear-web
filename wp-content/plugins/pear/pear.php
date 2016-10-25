@@ -126,7 +126,7 @@ class PearSubscriptionForm {
 		<div class="mid-section text-center">
 			<div class="pear-logo"></div>
 			<h1>Creating matches, the smart way</h1>
-			<p>COMING SOON</p>
+			<p class="mt0 mb32">Join our community to be among our beta testers or know when Pear will be available in your city</p>
 			<div class="row join-form-container">
 				<div class="col-xs-12 col-sm-4">
 					<input id="name" class="input-boxed" type="text" placeholder="Name" required/>
@@ -147,8 +147,6 @@ class PearSubscriptionForm {
 				<img class="loader inactive" src="<?php echo get_template_directory_uri(); ?>/dist/images/loader.svg"/>
 			</div>
 			<p class="mt24 we-promise">We promise to keep our emails to a minimum.</p>
-			<p class="mt0 mb32">Join our community to be among our beta testers or know when Pear will be available
-				in your city</p>
 		</div>
 		<?php
 		return $html = ob_get_clean();
