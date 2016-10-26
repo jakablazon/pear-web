@@ -10,7 +10,12 @@
     background: url('../images/hero-support.png');
     background-color: black;
     background-size: cover;
-    background-position-y: -210px;
+  }
+
+  @media (min-width: 1100px) {
+    .support-title {
+      background-position-y: -210px;
+    }
   }
 
   .item {
