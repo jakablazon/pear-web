@@ -7,7 +7,9 @@
 	<span class="bullet ml16 mr16"></span>
 	<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="/privacy">Privacy</a>
 	<span class="bullet ml16 mr16"></span>
-	<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs">Contact</a>
+	<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs" href="mailto:support@pear.me"
+	   target="_blank">Contact</a>
 	<span class="bullet ml16 mr16"></span>
-	<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs">Algorithmic Matching</a>
+	<a class="text-decoration-none text-color-grey-light text-thin text-size-xxs"
+	   href="http://www.algorithmicmatching.com/" target="_blank" rel="nofollow">Algorithmic Matching</a>
 </footer>
