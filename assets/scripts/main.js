@@ -32,13 +32,11 @@ $(function(){
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
+            slidesToScroll: 1
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 770,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1
@@ -113,6 +111,8 @@ $(function(){
                "images/pear_hero_2.png",
                "images/pear_hero_3.png");
 
+  var heroImagesClasses = ['hero-1', 'hero-2', 'hero-3'];
+
   var heroCurImage = 0;
 
   function loadimg(){
@@ -135,6 +135,8 @@ $(function(){
             //swap out bg src
             $('#hero-cover').css("background", "url(" +newimage+ ")");
             $('#hero-cover').css("background-color", "black");
+            $('#hero-cover').removeClass(heroImagesClasses[(heroCurImage + heroImagesClasses.length - 1) % heroImagesClasses.length]);
+            $('#hero-cover').addClass(heroImagesClasses[heroCurImage]);
 
             //animate fully back in
             $('#hero-cover').animate({ opacity: 1 }, 400,function(){

@@ -11,6 +11,12 @@
     background-color: black;
     background-size: cover;
     background-position-y: -210px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media #{$extra-small-and-down} {
+      background-position: 17% 50%;
+    }
   }
 
   .item {
