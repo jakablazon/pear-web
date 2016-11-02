@@ -1,6 +1,12 @@
 $('.content').css({height: $(window).innerHeight() > 800 ? $(window).innerHeight() : 800});
 
 $(function () {
+    // cookie banner
+
+    $('#cookie-wrapper .button').click(function() {
+      $('#cookie-wrapper').hide();
+    })
+
     //setting screen size
 
     var data = [];

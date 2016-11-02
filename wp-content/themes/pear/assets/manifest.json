@@ -29,6 +29,6 @@
     }
   },
   "config": {
-    "devUrl": "http://www.pear.me.local"
+    "devUrl": "http://localhost:8080/~urbanmarovt/pear-web/wp-content/themes/pear/dist"
   }
 }
