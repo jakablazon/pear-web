@@ -19,6 +19,7 @@ class PearSubscriptionForm {
 	public function __construct() {
 		add_filter( 'set-screen-option', [ __CLASS__, 'set_screen' ], 10, 3 );
 		add_action( 'admin_menu', [ $this, 'plugin_menu' ] );
+		add_action( 'admin_post_pr27_export_csv', [ $this, 'pr27_export_csv' ] );
 	}
 
 	public static function set_screen( $status, $option, $value ) {
@@ -81,6 +82,8 @@ class PearSubscriptionForm {
 				</div>
 				<br class="clear">
 			</div>
+
+			<a href="<?php echo admin_url( 'admin-post.php?action=pr27_export_csv' ); ?>" class="button button-primary">Export</a>
 		</div>
 		<?php
 	}
@@ -126,7 +129,8 @@ class PearSubscriptionForm {
 		<div class="mid-section text-center">
 			<div class="pear-logo"></div>
 			<h1>Creating matches, the smart way</h1>
-			<p class="mt0 mb32">Join our community to be among our beta testers or know when Pear will be available in your city</p>
+			<p class="mt0 mb32">Join our community to be among our beta testers or know when Pear will be available in
+				your city</p>
 			<div class="row join-form-container">
 				<div class="col-xs-12 col-sm-4">
 					<input id="name" class="input-boxed" type="text" placeholder="Name" required/>
@@ -150,6 +154,64 @@ class PearSubscriptionForm {
 		</div>
 		<?php
 		return $html = ob_get_clean();
+	}
+
+	function pr27_export_csv() {
+//		if ( ! wp_verify_nonce( $_POST['pr27_export_csv_nonce'], 'pr27_export_csv' ) ) {
+//			die( 'Invalid nonce.' . var_export( $_POST, true ) );
+//		}
+
+		global $wpdb;
+
+		$wpdb->show_errors();
+
+		$table_name = $wpdb->prefix . 'psf';
+
+		// Build your query
+		$results = $wpdb->get_results( "SELECT `Name`, `Email`, `Age`, `Location` FROM $table_name" );
+
+		// Process report request
+		if ( ! $results ) {
+			$error = $wpdb->print_error();
+			die( "The following error was found: $error" );
+		} else {
+			// Prepare our csv download
+
+			// Set header row values
+			$output_filename = 'Subscriptions.csv';
+			$output_handle   = @fopen( 'php://output', 'w' );
+
+			header( 'Cache-Control: must-revalidate, post-check=0, pre-check=0' );
+			header( 'Content-Description: File Transfer' );
+			header( 'Content-type: text/csv' );
+			header( 'Content-Disposition: attachment; filename=' . $output_filename );
+			header( 'Expires: 0' );
+			header( 'Pragma: public' );
+
+			$first = true;
+			// Parse results to csv format
+			foreach ( $results as $row ) {
+
+				// Add table headers
+				if ( $first ) {
+					$titles = array();
+					foreach ( $row as $key => $val ) {
+						$titles[] = $key;
+					}
+					fputcsv( $output_handle, $titles );
+					$first = false;
+				}
+
+				$leadArray = (array) $row; // Cast the Object to an array
+				// Add row to file
+				fputcsv( $output_handle, $leadArray );
+			}
+
+			// Close output file stream
+			fclose( $output_handle );
+
+			die();
+		}
 	}
 
 }
