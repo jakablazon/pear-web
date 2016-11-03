@@ -196,7 +196,7 @@ $(function () {
       deny: '<div class="cc-btn cc-deny button green shadow text-uppercase button-join" tabindex="0">{{deny}}</div>',
       close: '<div class="cc-close button green shadow text-uppercase button-join" tabindex="0">{{close}}</div>'
     },
-    window: '<div id="cookie-wrapper" role=”dialog” aria-label=”cookieconsent” aria-describedby=”cookieconsent:desc” class="container pt16 pb16 cc-window {{classes}}"><div class="row flex--align-vertical">{{children}}</div></div>',
+    window: '<div id="cookie-wrapper" role=”dialog” aria-label=”cookieconsent” aria-describedby=”cookieconsent:desc” class="pt16 pb16 cc-window {{classes}}"><div class="container"><div class="row flex--align-vertical">{{children}}</div></div></div>',
     onPopupOpen: function () {
       var didConsent = this.hasConsented();
       if (!didConsent) {
