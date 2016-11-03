@@ -176,6 +176,7 @@ function psfSubmissionHandler() {
 			$record = $reader->city( $ip );
 		} catch ( \Exception $e ) {
 			// geoip can't read ip data, do nothing
+      $record = null;
 		}
 
 		if ( isset( $record->city->name ) ) {
