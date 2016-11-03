@@ -7,7 +7,7 @@
 				<?php if ( get_row_layout() == 'strong_text' ) : ?>
 
 					<div class="col-xs-12 col-sm-8">
-						<p class="pt96 mb64 text-size-smd"><?php the_sub_field( 'strong' ); ?></p>
+						<p class="mb64 text-size-smd"><?php the_sub_field( 'strong' ); ?></p>
 					</div>
 
 				<?php elseif ( get_row_layout() == 'paragraph' ) : ?>

@@ -2,7 +2,7 @@
   <?php get_template_part( 'templates/page-header' ); ?>
 </div>
 
-<div class="article container pl16 pr16">
+<div class="article container pt96 pl16 pr16">
 
   <div>
     <?php get_template_part( 'templates/content-single', get_post_type() ); ?>
