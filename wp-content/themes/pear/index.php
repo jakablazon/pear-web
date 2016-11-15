@@ -169,7 +169,7 @@
 	<div class="landing-support support mb24 mt96 pb96">
 		<div id="nav-support-trigger"></div>
 		<div class="hero-title support-title">
-			<h1 class="text-center">Support</h1>
+			<h1 class="text-center text-uppercase">Support</h1>
 		</div>
 
 		<div class="row support-container">
