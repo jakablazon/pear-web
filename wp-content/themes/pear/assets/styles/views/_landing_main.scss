@@ -134,6 +134,24 @@
           background-color: black;
           margin-bottom: 18px;
         }
+
+        .button-pear-report {
+          position: relative;
+          bottom: 5px;
+          padding-top: 14px;
+
+          @media #{$extra-small-and-down} {
+            margin-top: 25px;
+          }
+
+          img {
+            margin-right: 4px;
+            width: 24px;
+            height: 19px;
+            position: relative;
+            top: 3px;
+          }
+        }
       }
     }
   }
