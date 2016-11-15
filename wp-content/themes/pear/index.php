@@ -227,9 +227,11 @@
       </div>
     </div>
 
-    <div class="button green shadow text-uppercase button-join">
-      Show all Q&A
-    </div>
+    <a href="/support">
+      <div class="button green shadow text-uppercase button-join">
+        Show all Q&A
+      </div>
+    </a>
   </div>
 
   <!-- <div id="nav-media-trigger"></div>
