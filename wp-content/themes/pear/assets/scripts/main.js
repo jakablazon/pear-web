@@ -190,13 +190,13 @@ $(function () {
       'opt-out': '<div class="cc-compliance cc-highlight col-xs-12 col-sm-4 col-md-3">{{deny}}{{dismiss}}</div>'
     },
     elements: {
-      message: '<div id="cookieconsent:desc" class="cc-message col-xs-12 col-sm-8 col-md-9"><p class="pull-left">{{message}}</p></div>',
+      message: '<div class="col-xs-0 col-md-1"></div><div id="cookieconsent:desc" class="cc-message col-xs-12 col-sm-8 col-md-7"><p class="pull-left">{{message}}</p></div>',
       dismiss: '<div class="cc-btn cc-dismiss button green shadow text-uppercase button-join" tabindex="0">{{dismiss}}</div>',
       allow: '<div class="cc-btn cc-allow button green shadow text-uppercase button-join" tabindex="0">{{allow}}</div>',
       deny: '<div class="cc-btn cc-deny button green shadow text-uppercase button-join" tabindex="0">{{deny}}</div>',
       close: '<div class="cc-close button green shadow text-uppercase button-join" tabindex="0">{{close}}</div>'
     },
-    window: '<div id="cookie-wrapper" role=”dialog” aria-label=”cookieconsent” aria-describedby=”cookieconsent:desc” class="pt16 pb16 cc-window {{classes}}"><div class="container"><div class="row flex--align-vertical">{{children}}</div></div></div>',
+    window: '<div id="cookie-wrapper" role=”dialog” aria-label=”cookieconsent” aria-describedby=”cookieconsent:desc” class="cc-window {{classes}}"><div class="container"><div class="row flex--align-vertical">{{children}}</div></div></div>',
     onPopupOpen: function () {
       var didConsent = this.hasConsented();
       if (!didConsent) {
@@ -210,7 +210,7 @@ $(function () {
       } else {
         $('body').removeClass('cookie-notice');
       }
-    },
+    }
   });
 
 });
