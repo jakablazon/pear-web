@@ -7,9 +7,19 @@
   right: 0;
   z-index: 10;
   background: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   .button {
     margin: 0 auto;
+
+    @media #{$small-and-down} {
+      margin-top: 10px;
+    }
+    @media #{$extra-small-and-down} {
+      margin-top: 0px;
+      margin-bottom: 24px;
+    }
   }
 
 }
