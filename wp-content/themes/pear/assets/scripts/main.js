@@ -179,8 +179,8 @@ $(function () {
       'pear-layout': '{{message}}{{compliance}}'
     },
     content: {
-      message: 'We are using cookies to provide statistics that help us give you the best experience of our site. By continuing to use the site, you are agreeing to our use of cookies.',
-      dismiss: 'Dismiss',
+      message: 'This site uses cookies. By continuing to use this site, you are agreeing to our use of cookies.',
+      dismiss: 'OK',
       allow: 'I agree',
       deny: 'Decline'
     },
