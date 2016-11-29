@@ -28,9 +28,11 @@
 
     endif; ?>
 
-    <div class="col-xs-12 col-sm-8">
-      <?php echo do_shortcode( '[TheChamp-Sharing]' ); ?>
-    </div>
+    <?php if ( function_exists( 'the_champ_sharing_shortcode' ) ) : ?>
+      <div class="col-xs-12 col-sm-8">
+        <?php echo do_shortcode( '[TheChamp-Sharing]' ); ?>
+      </div>
+    <?php endif; ?>
   </article>
 <?php endwhile; ?>
 
