@@ -81,6 +81,13 @@
         .we-promise {
           opacity: 0.5;
         }
+        .coming-soon {
+          img {
+            max-height: 28px;
+            position: relative;
+            top: 8px;
+          }
+        }
       }
 
       .join-form-container {
