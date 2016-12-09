@@ -151,6 +151,9 @@ class PearSubscriptionForm {
 				<img class="loader inactive" src="<?php echo get_template_directory_uri(); ?>/dist/images/loader.svg"/>
 			</div>
 			<p class="mt24 we-promise">We promise to keep our emails to a minimum.</p>
+            <p class="coming-soon">
+                Coming soon to &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/dist/images/soon-app-store.png"/>&nbsp; and &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/dist/images/soon-google-play.svg"/>.
+            </p>
 		</div>
 		<?php
 		return $html = ob_get_clean();
